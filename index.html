@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michael Scrivana — Designer, maker, technologist</title>
-<meta name="description" content="A brand designer who makes across every medium — drawing, painting, sculpture, digital art, 3D, motion, and AI. Seven years building brands in healthcare; always making in my own time.">
+<title>Michael Scrivana — Designer, maker, building with AI</title>
+<meta name="description" content="Brand designer and maker in healthcare — campaign, digital shelf, 3D, motion, and AI. Building branded lifestyle tools with Gemini. Seven years at scale; always making.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -81,16 +81,16 @@ body {
 
 /* ── HERO ── */
 header.hero { padding: 84px 0 52px; border-bottom: 1px solid var(--border); }
-.hero .kicker { color: var(--ink-3); margin-bottom: 26px; display: flex; align-items: center; gap: 10px; }
+.hero .kicker { color: var(--ink-3); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
 .hero .kicker .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 .hero h1 {
-  font-size: clamp(44px, 9vw, 84px); font-weight: 700; line-height: 0.98;
-  letter-spacing: -0.035em; margin-bottom: 22px;
-  color: var(--ink);
+  font-size: clamp(40px, 8vw, 72px); font-weight: 700; line-height: 1.02;
+  letter-spacing: -0.035em; margin-bottom: 24px; color: var(--ink);
   opacity: 0; transform: translateY(10px);
   animation: heroIn 0.75s cubic-bezier(.2,.7,.2,1) 0.15s forwards;
 }
 .hero h1 .hero-line { display: block; }
+.hero h1 .hero-line--soft { color: var(--ink-2); font-weight: 600; margin-top: 0.12em; }
 @keyframes heroIn { to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) {
   .hero h1 { opacity: 1; transform: none; animation: none; }
@@ -278,10 +278,10 @@ figure img { cursor: zoom-in; }
 
 <header class="hero">
   <div class="wrap">
-    <div class="kicker mono"><span class="dot"></span>&nbsp;Michael Scrivana &nbsp;·&nbsp; Designer &amp; Maker</div>
+    <div class="kicker mono"><span class="dot"></span>&nbsp;Michael Scrivana</div>
     <h1>
-      <span class="hero-line">I've made things by hand my whole</span>
-      <span class="hero-line">life</span>
+      <span class="hero-line">Designer and maker.</span>
+      <span class="hero-line hero-line--soft">Building with AI.</span>
     </h1>
     <p class="lede">For the last seven years I've been a brand designer, building brands across healthcare. But the making started at the easel and never stopped — drawing, painting, sculpture, digital art, 3D, motion, and lately AI. I build tools, wire pipelines, and make in my free time whenever I can — <span class="lede-tools">I love to learn and experiment.</span> What follows is a tour across those disciplines.</p>
     <figure class="hero-feature">
@@ -554,29 +554,29 @@ figure img { cursor: zoom-in; }
 
       <div class="block">
         <div class="label mono">In practice</div>
-        <p>I don't just use AI — I <strong>build with it</strong>. I prototype my own creative tools in code (React, media-generation models), stay close to the models as they change, and rewire my workflow around them. Last year I gave a talk, <em>"AI for Designers,"</em> teaching the practice to my team.</p>
+        <p>I don't just use AI — I <strong>build with it</strong>. The work below is branded lifestyle imagery: pack shots, colour systems, typography rules, and channel specs fed in as structured brand data, then generated through <strong>Gemini</strong> inside a node-based tool I built in React. Designers wire the pipeline — reference in, brand-rules check, generate, channel-fit, compliance, output — and get channel-ready lifestyle frames in minutes, not days. Last year I gave a talk, <em>"AI for Designers,"</em> teaching the practice to my team.</p>
       </div>
       <div class="block">
         <div class="label mono">Why I love it</div>
         <p>AI is just the newest material on my bench. The same instinct that pulled me from graphite to oil to clay to 3D pulls me here: a new medium shows up and I <em>have</em> to make something with it — and, increasingly, build the tool that makes it.</p>
       </div>
       <div class="jd-tag">
-        <span>AI as a medium</span><span>emerging tech</span><span>builds in code</span><span>making with technology</span>
+        <span>branded lifestyle</span><span>brand data in</span><span>Gemini</span><span>builds in code</span>
       </div>
 
       <div class="shots">
         <div class="lead-label">Act one — the tool I built</div>
         <figure class="wide">
-          <img src="images/creativelab-canvas-oad-kids.jpg" alt="CreativeLab — the node-based React Flow canvas where designers compose generation pipelines">
-          <figcaption><strong>CreativeLab — the system, not a prompt box.</strong> Designers don't think in prompts; they think in <em>steps</em> — so I borrowed the visual grammar of node editors (React Flow) and built the tool around composition. Each node is a designed primitive: reference in, brand-rules check, generate, channel-fit, compliance, output. The user wires the graph; the graph runs.</figcaption>
+          <img src="images/creativelab-canvas-oad-kids.jpg" alt="Node-based React Flow canvas — brand data in, Gemini generation out">
+          <figcaption><strong>The system, not a prompt box.</strong> Brand data — pack reference, colours, rules, channel specs — flows through a composable graph. Gemini handles generation at the centre; each node is a designed step: reference in, brand-rules check, generate, channel-fit, compliance, output. The user wires the graph; the graph runs.</figcaption>
         </figure>
         <figure class="wide">
-          <img src="images/creativelab-oad-kids-hero.jpg" alt="Channel-ready One A Day Kids hero generated in CreativeLab">
-          <figcaption><strong>What that graph produces</strong> — a channel-ready One A Day Kids hero. Nothing here was photographed; minutes from a real pack reference to a finished, on-brand frame.</figcaption>
+          <img src="images/creativelab-oad-kids-hero.jpg" alt="Channel-ready One A Day Kids lifestyle hero generated from brand data with Gemini">
+          <figcaption><strong>Branded lifestyle, channel-ready</strong> — a One A Day Kids hero built from the brand's own pack and colour system. Nothing photographed; Gemini generated the scene from structured brand data in minutes.</figcaption>
         </figure>
         <figure class="wide">
-          <img src="images/creativelab-claritin-lifestyle.jpg" alt="Claritin lifestyle scene generated from the pack and brand colours">
-          <figcaption><strong>Brand lifestyle, channel-ready</strong> — built from Claritin's own pack and brand colours into an on-brand seasonal scene.</figcaption>
+          <img src="images/creativelab-claritin-lifestyle.jpg" alt="Claritin seasonal lifestyle scene generated from pack and brand colours with Gemini">
+          <figcaption><strong>Seasonal lifestyle from brand data</strong> — Claritin's pack, palette, and brand rules in; an on-brand seasonal scene out. Same pipeline, different SKU — lifestyle imagery that stays inside the brand system.</figcaption>
         </figure>
 
         <div class="lead-label">Act two — exploring with the tools · product visualization</div>
