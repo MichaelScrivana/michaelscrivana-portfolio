@@ -1,342 +1,1066 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue Feb 24 2026 16:03:30 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="67084a3dbb84f332205bf75d" data-wf-site="633023a7fd7ec6455091290f" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Michael Scrivana — Brand &amp; Product Designer / Design Technologist</title>
-  <meta content="Brand &amp; Product Designer / Design Technologist. AI product work, brand launches, and spatial design." name="description">
-  <meta content="Michael Scrivana — Brand &amp; Product Designer / Design Technologist" property="og:title">
-  <meta content="Brand &amp; Product Designer / Design Technologist. AI product work, brand launches, and spatial design." property="og:description">
-  <meta content="https://uploads-ssl.webflow.com/633023a7fd7ec6455091290f/633819757b04fd0cc9c63ee9_softbody.webp" property="og:image">
-  <meta content="Michael Scrivana — Brand &amp; Product Designer / Design Technologist" property="twitter:title">
-  <meta content="Brand &amp; Product Designer / Design Technologist. AI product work, brand launches, and spatial design." property="twitter:description">
-  <meta content="https://uploads-ssl.webflow.com/633023a7fd7ec6455091290f/633819757b04fd0cc9c63ee9_softbody.webp" property="twitter:image">
-  <meta property="og:type" content="website">
-  <meta content="summary_large_image" name="twitter:card">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="Webflow" name="generator">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/michaelscrivana.webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/animations.css" rel="stylesheet" type="text/css">
-  <link href="css/theme-override.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael Scrivana — Designer, maker, technologist</title>
+<meta name="description" content="A brand designer who makes across every medium — drawing, painting, sculpture, digital art, 3D, motion, and AI. Seven years building brands in healthcare; always making in my own time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════════════════
+   Craft-forward scroll — light paper, graphite/ink accent.
+   Self-contained, single file.
+   ══════════════════════════════════════════════════════════════ */
+:root {
+  --bg:        #f6f7f9;
+  --surface:   #ffffff;
+  --surface-2: #eceef1;
+  --accent:      #3a3a40;   /* graphite / ink */
+  --accent-deep: #26262b;
+  --accent-dim:  rgba(58, 58, 64, 0.07);
+  --accent-line: rgba(58, 58, 64, 0.20);
+  --ink:    #0a0d12;
+  --ink-2:  #45474f;
+  --ink-3:  #80828c;
+  --ink-4:  #a8aab2;
+  --border:      rgba(10, 13, 18, 0.10);
+  --border-soft: rgba(10, 13, 18, 0.06);
+  --font: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'JetBrains Mono', 'SF Mono', monospace;
+  --tight: -0.025em;
+  --body:  -0.005em;
+  --track: 0.18em;
+  --shadow:    0 8px 30px -18px rgba(10, 13, 18, 0.30);
+  --shadow-sm: 0 2px 10px -6px rgba(10, 13, 18, 0.25);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(ellipse 70% 40% at 50% -10%, var(--accent-dim), transparent 60%),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px; line-height: 1.6; letter-spacing: var(--body);
+  -webkit-font-smoothing: antialiased; min-height: 100vh;
+}
+::selection { background: var(--accent); color: #fff; }
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script type="text/javascript">WebFont.load({  google: {    families: ["DM Sans:300,400,500,600,700"]  }});</script>
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 28px; }
+
+.mono { font-family: var(--mono); text-transform: uppercase; letter-spacing: var(--track); font-size: 11px; font-weight: 500; }
+.eyebrow { color: var(--accent); }
+
+/* ── TOP NAV ── */
+.topnav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(246, 247, 249, 0.82);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.topnav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 18px; }
+.topnav .brand {
+  font-weight: 700; letter-spacing: var(--tight); font-size: 15px;
+  color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 9px; white-space: nowrap;
+}
+.topnav .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
+.topnav .links { display: flex; align-items: center; gap: 18px; }
+.topnav .links a {
+  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 11px; font-weight: 500; color: var(--ink-3); text-decoration: none; transition: color .15s;
+}
+.topnav .links a:hover { color: var(--accent); }
+.topnav .links a.contact { color: var(--accent); }
+.topnav .links a.resume { color: var(--accent); font-weight: 600; }
+@media (max-width: 860px) { .topnav .links a.case-link { display: none; } }
+
+/* ── HERO ── */
+header.hero { padding: 84px 0 52px; border-bottom: 1px solid var(--border); }
+.hero .kicker { color: var(--ink-3); margin-bottom: 26px; display: flex; align-items: center; gap: 10px; }
+.hero .kicker .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.hero h1 {
+  font-size: clamp(34px, 6vw, 56px); font-weight: 700; line-height: 1.08;
+  letter-spacing: var(--tight); max-width: 22ch; margin-bottom: 24px;
+}
+.hero h1 .hero-craft { display: block; color: var(--ink); }
+.hero h1 .hero-tech {
+  display: block; margin-top: 0.22em;
+  font-weight: 600; color: var(--ink);
+  opacity: 0; transform: translateY(10px);
+  animation: heroTechIn 0.75s cubic-bezier(.2,.7,.2,1) 0.4s forwards;
+}
+.hero h1 .tool-slot {
+  display: inline-block; vertical-align: baseline;
+  font-family: var(--mono); font-size: 0.78em; font-weight: 600;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--accent-deep); background: var(--accent-dim);
+  border: 1px solid var(--accent-line); border-radius: 6px;
+  padding: 0.12em 0.55em 0.14em; min-width: 17ch; text-align: center;
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+.hero h1 .tool-slot.is-changing { opacity: 0.25; transform: translateY(3px); }
+@keyframes heroTechIn { to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .hero h1 .hero-tech { opacity: 1; transform: none; animation: none; }
+  .hero h1 .tool-slot { transition: none; }
+}
+.hero .lede { font-size: clamp(16px, 2.2vw, 19px); color: var(--ink-2); max-width: 64ch; line-height: 1.6; }
+.hero .lede .lede-tools { color: var(--ink); font-weight: 500; }
+.hero-feature { margin-top: 36px; }
+.hero-feature img {
+  width: 100%; height: auto; display: block;
+  border-radius: 16px; border: 1px solid var(--border);
+  box-shadow: var(--shadow); background: var(--surface);
+}
+.hero-feature figcaption {
+  font-size: 13px; color: var(--ink-3); margin-top: 12px; line-height: 1.55;
+}
+.hero-feature figcaption strong { color: var(--ink-2); font-weight: 600; }
+
+/* ── THESIS STRIP ── */
+.thesis { padding: 42px 0; border-bottom: 1px solid var(--border); text-align: left; }
+.thesis p { font-size: clamp(18px, 2.6vw, 25px); font-weight: 600; letter-spacing: var(--tight); line-height: 1.4; max-width: 34ch; text-align: left; }
+.thesis p .hl { color: var(--accent); }
+
+/* ── DISCIPLINE SECTIONS ── */
+.case { padding: 58px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 70px; }
+.case-head {
+  display: flex; flex-direction: column; align-items: flex-start;
+  gap: 10px; margin-bottom: 28px; text-align: left; width: 100%;
+}
+.case-num { font-family: var(--mono); font-size: 13px; color: var(--accent); padding-top: 0; display: flex; align-items: center; gap: 7px; }
+.case-num .tick { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: none; }
+.case-head > div:last-child { width: 100%; text-align: left; }
+.case-title { font-size: clamp(24px, 4vw, 34px); font-weight: 700; letter-spacing: var(--tight); line-height: 1.08; text-align: left; }
+.case-sub {
+  color: var(--ink-2); font-size: 14px; margin-top: 8px;
+  font-family: var(--mono); font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em;
+  text-align: left; width: 100%;
+}
+
+.case-body { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 40px; }
+@media (max-width: 680px) { .case-body { grid-template-columns: 1fr; } }
+.block .label { color: var(--ink-2); margin-bottom: 8px; font-weight: 600; text-align: left; }
+.block p { font-size: 15px; color: var(--ink-2); line-height: 1.62; }
+.block p strong { color: var(--ink); font-weight: 600; }
+.block p em { font-style: italic; }
+.block.full { grid-column: 1 / -1; }
+
+.jd-tag { grid-column: 1/-1; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.jd-tag + .shots { margin-top: 28px; }
+.jd-tag span {
+  font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--accent-deep); background: var(--accent-dim); border: 1px solid var(--accent-line);
+  padding: 5px 10px; border-radius: 100px;
+}
+
+/* ── IMAGE GALLERY ── */
+.shots { grid-column: 1 / -1; margin: 2px 0 6px; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.trio { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+@media (max-width: 680px) { .pair, .trio { grid-template-columns: 1fr; } }
+figure { margin: 0; }
+figure img {
+  width: 100%; height: auto; display: block;
+  border-radius: 14px; border: 1px solid var(--border);
+  background: var(--surface); box-shadow: var(--shadow);
+}
+figure img.contain { object-fit: contain; }
+figcaption { font-size: 12.5px; color: var(--ink-3); margin-top: 10px; line-height: 1.5; }
+figcaption strong { color: var(--ink-2); font-weight: 600; }
+.shots .wide { margin-top: 18px; }
+.shots .wide:first-child { margin-top: 0; }
+.shots .row-gap { margin-top: 16px; }
+.video { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); background: #0a0d12; }
+.video iframe,
+.video video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; object-fit: cover; }
+.video-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 680px) { .video-pair { grid-template-columns: 1fr; } }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+.lead-label {
+  font-family: var(--mono); font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em;
+  font-size: 10.5px; color: var(--ink-2); margin: 26px 0 12px; padding-top: 6px;
+  border-top: 1px solid var(--border-soft); text-align: left; width: 100%; display: block;
+}
+.lead-label:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.lead-label.lead-label--break { margin-top: 56px; padding-top: 20px; }
+.gallery-strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 12px; }
+.gallery-strip figure img { border-radius: 10px; aspect-ratio: 1 / 1; object-fit: cover; }
+.gallery-cap { font-size: 12.5px; color: var(--ink-3); margin-top: 12px; line-height: 1.5; }
+.gallery-cap strong { color: var(--ink-2); font-weight: 600; }
+.gallery-lead { margin-top: 0; margin-bottom: 14px; max-width: 62ch; }
+
+/* ── FOOTER ── */
+footer { padding: 60px 0 84px; }
+footer .big { font-size: clamp(22px, 3.5vw, 30px); font-weight: 700; letter-spacing: var(--tight); margin-bottom: 18px; max-width: 26ch; }
+footer .links { font-size: 15px; color: var(--ink-2); }
+footer .links a { color: var(--accent); text-decoration: none; font-weight: 500; }
+footer .links a:hover { text-decoration: underline; }
+footer .fine { margin-top: 32px; font-size: 12px; color: var(--ink-4); font-family: var(--mono); letter-spacing: 0.06em; line-height: 1.6; }
+
+/* ── LIGHTBOX ── */
+figure img { cursor: zoom-in; }
+.lightbox {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 16px; padding: 4vh 4vw;
+  background: rgba(10, 13, 18, 0.92);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  opacity: 0; visibility: hidden; transition: opacity .22s ease, visibility .22s ease;
+  cursor: zoom-out;
+}
+.lightbox.open { opacity: 1; visibility: visible; }
+.lightbox img {
+  max-width: 92vw; max-height: 84vh; width: auto; height: auto;
+  object-fit: contain; border-radius: 10px;
+  box-shadow: 0 30px 80px -30px rgba(0,0,0,0.8);
+  background: var(--surface); cursor: default;
+  transform: scale(.98); transition: transform .22s ease;
+}
+.lightbox.open img { transform: scale(1); }
+.lightbox .lb-cap {
+  max-width: 70ch; text-align: center; color: rgba(255,255,255,0.78);
+  font-size: 13.5px; line-height: 1.55; cursor: default;
+}
+.lightbox .lb-cap strong { color: #fff; font-weight: 600; }
+.lightbox .lb-close {
+  position: fixed; top: 18px; right: 22px;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.06);
+  color: #fff; font-size: 20px; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; transition: background .15s;
+}
+.lightbox .lb-close:hover { background: rgba(255,255,255,0.16); }
+.lightbox .lb-nav {
+  position: fixed; top: 50%; transform: translateY(-50%);
+  width: 48px; height: 48px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.06);
+  color: #fff; font-size: 24px; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; transition: background .15s;
+}
+.lightbox .lb-nav:hover { background: rgba(255,255,255,0.16); }
+.lightbox .lb-prev { left: 18px; }
+.lightbox .lb-next { right: 18px; }
+@media (max-width: 600px) { .lightbox .lb-prev { left: 8px; } .lightbox .lb-next { right: 8px; } .lightbox .lb-nav { width: 42px; height: 42px; } }
+
+/* ── PLAY / INKJUMP RUNNER ── */
+.play { padding: 60px 0 76px; border-top: 1px solid var(--border); }
+.play-head { text-align: left; margin-bottom: 24px; }
+.play-head .eyebrow { color: var(--accent); display: block; margin-bottom: 12px; }
+.play-head h2 { font-size: clamp(22px, 3.5vw, 30px); font-weight: 700; letter-spacing: var(--tight); margin-bottom: 10px; }
+.play-head p { font-size: 14px; color: var(--ink-3); }
+.play-head kbd { font-family: var(--mono); font-size: 11px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; color: var(--ink-2); }
+.play-frame { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+.play-frame canvas { display: block; width: 100%; height: auto; cursor: pointer; touch-action: manipulation; }
+
+/* ── SCROLL REVEAL (ink) ── */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1); will-change: opacity, transform; }
+.reveal.in { opacity: 1; transform: none; }
+.reveal-wipe { opacity: 0; clip-path: inset(0 100% 0 0); transition: clip-path .75s cubic-bezier(.2,.7,.2,1), opacity .5s ease; }
+.reveal-wipe.in { opacity: 1; clip-path: inset(0 0 0 0); }
+
+/* ── REDUCED MOTION: disable reveals ── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .reveal-wipe { opacity: 1 !important; transform: none !important; clip-path: none !important; transition: none !important; }
+}
+</style>
 </head>
-<body class="body-3">
-  <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
-    <div class="container-25 w-container">
-      <div class="div-block-28">
-        <a href="index.html" aria-current="page" class="brand w-nav-brand w--current"><img loading="lazy" src="images/MS-logo-noBG.png" alt="Michael Scrivana logo" class="image-32"></a>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <a class="brand" href="https://www.michaelscrivana.com"><span class="dot"></span>Michael Scrivana</a>
+    <div class="links">
+      <a class="case-link" href="#campaign">Campaign</a>
+      <a class="case-link" href="#commerce">Ecommerce</a>
+      <a class="case-link" href="#poster">Poster &amp; Illustration</a>
+      <a class="case-link" href="#motion">3D &amp; Motion</a>
+      <a class="case-link" href="#ai">AI as Medium</a>
+      <a class="case-link" href="#experience">Experiences</a>
+      <a class="case-link" href="#fineart">Fine Art</a>
+      <a class="resume" href="documents/Michael_Scrivana_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      <a class="contact" href="mailto:mkscrivana@gmail.com">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker mono"><span class="dot"></span>&nbsp;Michael Scrivana &nbsp;·&nbsp; Designer &amp; Maker</div>
+    <h1>
+      <span class="hero-craft">I've made things by hand my whole life</span>
+      <span class="hero-tech">and I can't stop bringing <span class="tool-slot" id="toolSlot" aria-live="polite">AI</span> into it.</span>
+    </h1>
+    <p class="lede">For the last seven years I've been a brand designer, building brands across healthcare. But the making started at the easel and never stopped — drawing, painting, sculpture, digital art, 3D, motion, and lately AI. I build tools, wire pipelines, and make in my free time whenever I can — <span class="lede-tools">I love to learn and experiment.</span> What follows is a tour across those disciplines.</p>
+    <figure class="hero-feature">
+      <img src="images/MIRAFAST.png" alt="MiraFAST multi-surface brand launch — packaging, digital, and retail">
+      <figcaption><strong>MiraLAX line launch — one idea across every surface.</strong> Brand identity, packaging, pouch-format innovation, ecommerce, and social, concepted to creative-lock in three-week sprints. 3rd fastest-scaling Digestive Health launch in five years — <strong>$48M combined retail sales</strong>.</figcaption>
+    </figure>
+  </div>
+</header>
+
+<section class="thesis">
+  <div class="wrap">
+    <p>I make across every medium I can get my hands on — and let <span class="hl">each new tool</span> reshape how I make.</p>
+  </div>
+</section>
+
+<!-- 01 — CAMPAIGN AT SCALE -->
+<section class="case" id="campaign">
+  <div class="wrap">
+    <div class="case-head">
+      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>01</div>
+      <div>
+        <div class="case-title">Brand &amp; campaign</div>
+        <div class="case-sub">Integrated · brief to launch · at scale</div>
       </div>
-      <nav role="navigation" class="nav-menu-3 w-nav-menu">
-        <a href="index.html" aria-current="page" class="nav-link-3 w-nav-link w--current">Work</a>
-        <a href="about.html" class="nav-link-4 w-nav-link">About</a>
-        <a href="contact.html" class="nav-link-5 w-nav-link">Contact</a>
-      </nav>
-      <div class="menu-button-2 w-nav-button">
-        <div class="menu-icon-2">
-          <div class="menu-icon-line-top-2"></div>
-          <div class="menu-icon-line-middle-2">
-            <div class="menu-icon-line-middle-inner-4"></div>
+    </div>
+    <div class="case-body">
+
+      <div class="block">
+        <div class="label mono">The work</div>
+        <p>I lead creative <strong>from the blank brief to launch</strong> — concepting the idea, art-directing the look, and driving it through to finished, channel-ready execution. Recent work includes the new One A Day brand identity (hundreds of KVs and photoreal renders) and MiraLAX line extensions — one idea carried across pack, film, social, retail, and web.</p>
+      </div>
+      <div class="block">
+        <div class="label mono">How I work</div>
+        <p>Side by side with marketers, insights, animators, ecomm, copywriters, and producers — I hold the through-line so one idea stays whole as it fans out across channels, markets, and a hundred deliverables.</p>
+      </div>
+      <div class="jd-tag">
+        <span>brief → launch</span><span>integrated campaign</span><span>cross-functional</span><span>concept + execution</span>
+      </div>
+
+      <div class="shots">
+        <figure class="wide">
+          <div class="video">
+            <iframe src="https://player.vimeo.com/video/1203666719?h=95c98f0ba1&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="One A Day Women&rsquo;s Multi Gummy brand animation"></iframe>
           </div>
-          <div class="menu-icon-line-bottom-4"></div>
+          <figcaption><strong>One A Day — new brand identity.</strong> Women&rsquo;s Multi Gummy launch animation — part of the &ldquo;The ONE for you.&rdquo; system I led across the full portfolio. Hundreds of photoreal stills and motion assets for digital, print, and retail.</figcaption>
+        </figure>
+
+        <figure class="wide row-gap">
+          <img src="images/oad-new/oad-kv-lineup-orange.webp" alt="One A Day new brand identity — portfolio lineup key visual, The ONE for you">
+          <figcaption><strong>Portfolio lineup.</strong> Key visual system across Women&rsquo;s, Men&rsquo;s, Kids, Prenatal, and 50+ lines — one identity, every segment.</figcaption>
+        </figure>
+
+        <div class="lead-label">Wave 1 + 2 — key visuals by segment</div>
+        <div class="pair">
+          <figure>
+            <img src="images/oad-new/oad-kv-mens-blue.webp" alt="One A Day Men&rsquo;s Multi key visual — blue brand field">
+            <figcaption><strong>Men&rsquo;s.</strong> Gummy and tablet renders on the new blue brand field.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/oad-new/oad-kv-kids-cyan.webp" alt="One A Day Kids Multi key visual — cyan brand field">
+            <figcaption><strong>Kids.</strong> Multi, Iron, and Probiotic gummies — three SKUs, one system.</figcaption>
+          </figure>
         </div>
+        <div class="pair row-gap">
+          <figure>
+            <img src="images/oad-new/oad-kv-womens-lineup.webp" alt="One A Day Women&rsquo;s and Prenatal key visual">
+            <figcaption><strong>Women&rsquo;s &amp; Prenatal.</strong> Prenatal gummy, Women&rsquo;s gummy, and Women&rsquo;s 50+ tablet.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/oad-new/oad-kv-gummy-tablet-lineup.webp" alt="One A Day gummy and tablet portfolio key visual">
+            <figcaption><strong>Gummy + tablet.</strong> The full format range on one orange brand field.</figcaption>
+          </figure>
+        </div>
+
+        <div class="lead-label">Photoreal product renders — digital &amp; print</div>
+        <div class="trio">
+          <figure><img src="images/oad-new/oad-product-teen-gummy.webp" alt="One A Day Teen Multi Gummy product render"><figcaption>Teen Multi Gummy</figcaption></figure>
+          <figure><img src="images/oad-new/oad-product-mens-50-tablet.webp" alt="One A Day Men&rsquo;s 50+ Multi tablet render"><figcaption>Men&rsquo;s 50+ Multi</figcaption></figure>
+          <figure><img src="images/oad-new/oad-product-kids-multi.webp" alt="One A Day Kids Multi gummy render"><figcaption>Kids Multi</figcaption></figure>
+        </div>
+
+        <figure class="wide row-gap">
+          <div class="video">
+            <iframe src="https://player.vimeo.com/video/1203666606?title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="One A Day Kids character animation"></iframe>
+          </div>
+          <figcaption><strong>Kids — character animation.</strong> Character motion for the new Kids line — same cyan brand field, same &ldquo;The ONE for you.&rdquo; system, built for digital and social.</figcaption>
+        </figure>
+
+        <p class="gallery-cap"><strong>Hundreds of renders</strong> produced for Amazon, retailer platforms, brand .com, social, and print — each SKU, format, and segment with its own color story inside one identity system.</p>
+
+        <figure class="wide row-gap">
+          <img src="images/oad-new/oad-wave-overview.webp" alt="One A Day Wave 1 and 2 stills overview — full key visual matrix">
+          <figcaption><strong>Wave 1 + 2 stills.</strong> A slice of the full KV matrix — every segment, every format, every brand field.</figcaption>
+        </figure>
       </div>
     </div>
   </div>
-  <!-- hero-hide section removed: broken video element with no source -->
-  <div class="section-7">
-    <div class="container-home w-container">
-      <div class="centre-align">
-        <div class="text-box _900px">
-          <h2 data-w-id="45f8ade1-566e-455d-577b-67a15abcbf10" class="heading extra-large hero-anim">Michael Scrivana</h2>
-          <div data-w-id="2041fd22-a6a7-c685-3b50-c3ec1e4ce7bc" class="text-block hero-anim">Brand &amp; Product Designer / Design Technologist</div>
+</section>
+
+<!-- 02 — ECOMMERCE & DIGITAL SHELF -->
+<section class="case" id="commerce">
+  <div class="wrap">
+    <div class="case-head">
+      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>02</div>
+      <div>
+        <div class="case-title">Ecommerce &amp; the digital shelf</div>
+        <div class="case-sub">Amazon &amp; retailer · web · mobile · in-store</div>
+      </div>
+    </div>
+    <div class="case-body">
+
+      <div class="block full">
+        <div class="label mono">The work</div>
+        <p>Where the brand actually meets the shopper — the digital shelf and the store aisle. I design the <strong>full path to purchase</strong>: product imagery, Amazon A+ and retailer pages, responsive brand sites, and in-store merchandising, all holding one visual system from hero image to "add to cart."</p>
+      </div>
+      <div class="jd-tag">
+        <span>ecommerce</span><span>digital shelf</span><span>responsive web</span><span>retail / in-store</span>
+      </div>
+
+      <div class="shots">
+        <div class="lead-label">One A Day — product &amp; the digital shelf</div>
+        <figure class="wide">
+          <img src="images/HatchProductshot-1.webp" alt="One A Day wellness line product photography">
+          <figcaption><strong>The wellness line, shot for the shelf.</strong> Product photography and renders that carry a portfolio across Amazon, retailer platforms, and brand .coms — one visual system, every SKU.</figcaption>
+        </figure>
+        <div class="pair row-gap">
+          <figure><img src="images/BTFStress.webp" alt="One A Day Stress Less — Ashwagandha, Passionflower and Valerian"><figcaption><strong>Stress Less</strong> — ingredient-led BTF module</figcaption></figure>
+          <figure><img src="images/BTFCognitive.webp" alt="One A Day Cognitive Support — Bacopa, Rhodiola and Holy Basil"><figcaption><strong>Cognitive Support</strong> — ingredient-led BTF module</figcaption></figure>
         </div>
+        <div class="pair row-gap">
+          <figure><img src="images/BTFFocus.webp" alt="One A Day Active Focus — Ginseng, L-Theanine and Caffeine"><figcaption><strong>Active Focus</strong> — ingredient-led BTF module</figcaption></figure>
+          <figure><img src="images/BTFSleep.webp" alt="One A Day Sleep Well — Melatonin and Passionflower"><figcaption><strong>Sleep Well</strong> — ingredient-led BTF module</figcaption></figure>
+        </div>
+
+        <div class="lead-label lead-label--break">Iberogast — web, mobile &amp; retail</div>
+        <figure class="wide">
+          <img src="images/IB-web-overview.webp" alt="Iberogast website — Gut issues? Not an issue.">
+          <figcaption><strong>Iberogast launch site.</strong> "Gut issues? Not an issue." — a full responsive brand site, concept through build-ready design.</figcaption>
+        </figure>
+        <div class="pair row-gap">
+          <figure><img src="images/Mobile-mock1.webp" alt="Iberogast responsive mobile screens"><figcaption><strong>Mobile experience</strong> — the whole journey, designed for the phone first.</figcaption></figure>
+          <figure><img src="images/IB-VizMerch-1.webp" alt="Iberogast retail merchandising display"><figcaption><strong>Retail merchandising</strong> — the same identity, built for the store.</figcaption></figure>
+        </div>
+        <figure class="wide row-gap">
+          <div class="video">
+            <iframe src="https://player.vimeo.com/video/885171321?h=57569bab95&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Iberogast mode of action animation concept"></iframe>
+          </div>
+          <figcaption><strong>Mode of action animation.</strong> Concept animation translating Iberogast&rsquo;s clinical story into motion for digital channels.</figcaption>
+        </figure>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ============ HERO FEATURE TILE — CLAUDE CODE APPLICATION ============ -->
-  <style>
-    .hero-feature {
-      max-width: 1200px;
-      margin: 0 auto 56px;
-      padding: 0 24px;
-    }
-    .hero-feature a {
-      display: block;
-      position: relative;
-      background:
-        radial-gradient(ellipse 60% 80% at 100% 0%, rgba(255, 61, 31, 0.18), transparent 60%),
-        linear-gradient(180deg, #141414, #0a0a0a);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 18px;
-      padding: 56px 56px 48px;
-      color: #f0f0f2;
-      text-decoration: none;
-      overflow: hidden;
-      transition: transform 200ms cubic-bezier(0.2, 0, 0, 1), border-color 200ms cubic-bezier(0.2, 0, 0, 1), box-shadow 200ms cubic-bezier(0.2, 0, 0, 1);
-    }
-    .hero-feature a:hover {
-      transform: translateY(-3px);
-      border-color: rgba(255, 61, 31, 0.7);
-      box-shadow: 0 18px 60px -20px rgba(255, 61, 31, 0.45);
-    }
-    .hero-feature .eyebrow {
-      font-family: 'JetBrains Mono', 'SF Mono', monospace;
-      font-size: 11px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: #FF3D1F;
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .hero-feature .eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #FF3D1F;
-      box-shadow: 0 0 12px rgba(255, 61, 31, 0.7);
-    }
-    .hero-feature h3 {
-      font-family: 'DM Sans', -apple-system, sans-serif;
-      font-size: clamp(28px, 4.2vw, 48px);
-      font-weight: 700;
-      line-height: 1.05;
-      letter-spacing: -0.025em;
-      color: #f0f0f2;
-      margin: 0 0 18px;
-      max-width: 22ch;
-    }
-    .hero-feature h3 em {
-      font-style: italic;
-      font-weight: 400;
-      color: #00A896;
-    }
-    .hero-feature p {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 17px;
-      line-height: 1.55;
-      color: #a8a8ad;
-      max-width: 64ch;
-      margin: 0 0 28px;
-    }
-    .hero-feature .cta-row {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .hero-feature .read-cta {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: #FF3D1F;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .hero-feature .meta-row {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10.5px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: #6a6a70;
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    .hero-feature .meta-row .sep { color: #4a4a4f; }
-    @media (max-width: 640px) {
-      .hero-feature a { padding: 36px 28px 32px; border-radius: 14px; }
-      .hero-feature .cta-row { gap: 18px; }
-    }
-
-    /* secondary rail — brand & spatial */
-    .secondary-rail-head {
-      max-width: 1200px;
-      margin: 80px auto 24px;
-      padding: 0 24px;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-      padding-bottom: 16px;
-    }
-    .secondary-rail-head h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: #6a6a70;
-      margin: 0;
-    }
-    .secondary-rail-head .count {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: #8b9099;
-    }
-    .other-link-row {
-      max-width: 1200px;
-      margin: 40px auto 0;
-      padding: 24px;
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-      justify-content: center;
-      border-top: 1px solid rgba(0,0,0,0.08);
-    }
-    .other-link-row a {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px;
-      color: #6a6a70;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(0,0,0,0.14);
-      padding-bottom: 2px;
-      transition: color 160ms;
-    }
-    .other-link-row a:hover { color: #FF3D1F; }
-  </style>
-
-
-  <!-- ============ PRIMARY GRID — PRODUCT, ECOMM, AI ============ -->
-  <div class="movie paddinghome">
-    <div class="w-layout-blockcontainer pinterest container-padding w-container stagger">
-
-      <!-- 1. MIRAFAST / MIRALAX — multi-surface brand launch -->
-      <div class="div-block-27 fade-in">
-        <a href="miralax.html" class="link-block-5 w-inline-block"><img src="images/MIRAFAST.png" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" alt="MiraFAST brand launch packaging design" class="image-21">
-          <div class="content-tab">
-            <h4 class="heading-8">MiraFAST &middot; Multi-Surface Brand Launch</h4>
-          </div>
-        </a>
+<!-- 03 — POSTER & ILLUSTRATION -->
+<section class="case" id="poster">
+  <div class="wrap">
+    <div class="case-head">
+      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>03</div>
+      <div>
+        <div class="case-title">Poster &amp; illustration</div>
+        <div class="case-sub">Type &amp; composition · digital illustration · brand</div>
       </div>
-
-      <!-- 2. AGE FACTOR LAUNCH (product launch) -->
-      <div class="div-block-27 fade-in">
-        <a href="age-factor.html" class="link-block-5 w-inline-block"><img src="images/AF-KV-083123.webp" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" alt="One A Day Age Factor — product launch creative" class="image-21 image-21--contain">
-          <div class="content-tab">
-            <h4 class="heading-8">Age Factor &middot; Product Launch</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- 3. ONE A DAY — ECOMM LAUNCH (Hatch productshot) -->
-      <div class="div-block-27 fade-in">
-        <a href="ecommerce1.html" class="link-block-5 w-inline-block"><img src="images/HatchProductshot-1.webp" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" alt="One A Day ecommerce launch — Hatch productshot" class="image-21">
-          <div class="content-tab">
-            <h4 class="heading-8">One A Day &middot; Ecomm Launch</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- 4. AI & Design Innovation -->
-      <div class="div-block-27 fade-in">
-        <a href="ai.html" class="link-block-5 w-inline-block"><img src="images/AIArt26.webp" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/AIArt26-p-500.png 500w, images/AIArt26-p-800.png 800w, images/AIArt26-p-1080.png 1080w, images/AIArt26.webp 1536w" alt="AI-generated design exploration" class="image-21">
-          <div class="content-tab">
-            <h4 class="heading-8">AI &amp; Design Innovation</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- 5. IBEROGAST -->
-      <div class="div-block-27 fade-in">
-        <a href="iberogast-launch.html" class="link-block-5 w-inline-block"><img src="images/Mobile-mock1.webp" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Mobile-mock1-p-500.png 500w, images/Mobile-mock1-p-800.png 800w, images/Mobile-mock1-p-1080.png 1080w, images/Mobile-mock1.webp 1280w" alt="Iberogast brand launch mobile mockup" class="image-21">
-          <div class="content-tab">
-            <h4 class="heading-8">Iberogast Launch</h4>
-          </div>
-        </a>
-      </div>
-
     </div>
-  </div>
+    <div class="case-body">
 
-  <!-- ============ SECONDARY RAIL — BRAND & SPATIAL (hidden for now) ============ -->
-  <div class="home-section-hidden" aria-hidden="true">
-    <div class="secondary-rail-head fade-in">
-      <h4>Brand &amp; spatial work</h4>
-      <span class="count">02 / 02</span>
-    </div>
-    <div class="movie paddinghome">
-      <div class="w-layout-blockcontainer pinterest container-padding w-container stagger">
+      <div class="block full">
+        <div class="label mono">The range</div>
+        <p>Digital illustration is its own discipline — distinct from the hand-drawn work above. Vector, digital painting, and poster composition: type set with intent, compositions fought for, range across mediums. <strong>Conceptual and execution.</strong></p>
+      </div>
+      <div class="jd-tag">
+        <span>poster design</span><span>digital illustration</span><span>typography</span><span>vector &amp; 3D</span>
+      </div>
 
-        <!-- BOLD EVENT -->
-        <div class="div-block-27 fade-in">
-          <a href="marketingexcellence.html" class="link-block-5 w-inline-block"><img src="images/BOLD-HERO2.png" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" alt="BOLD Activation Tour — event identity design" class="image-21">
-            <div class="content-tab">
-              <h4 class="heading-8">BOLD Breakthrough Tour</h4>
-            </div>
-          </a>
+      <div class="shots">
+        <div class="lead-label">Posters — type, colour, composition</div>
+        <figure>
+          <img src="images/poster005.webp" alt="Day 4 poster — a 3D particle-rendered head over op-art linework">
+          <figcaption><strong>Poster experiment</strong> — exploring type, color, and the overlap between 2D and 3D in one frame. I love seeing how far a single composition can go.</figcaption>
+        </figure>
+        <div class="trio row-gap">
+          <figure><img src="images/poster001.webp" alt="Typographic poster"></figure>
+          <figure><img src="images/poster004.webp" alt="Typographic poster"></figure>
+          <figure><img src="images/yellowposter-thumb.webp" alt="Typographic poster in yellow"></figure>
         </div>
 
-        <!-- NACDS BOOTH -->
-        <div class="div-block-27 fade-in">
-          <a href="nacds.html" class="link-block-5 w-inline-block"><img src="images/nacds/TSE_booth-exterior-with-competitor.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" alt="Bayer NACDS trade show booth — spatial exhibition design" class="image-21">
-            <div class="content-tab">
-              <h4 class="heading-8">NACDS Booth Design</h4>
-            </div>
-          </a>
+        <div class="lead-label">Digital illustration &amp; painting</div>
+        <div class="trio">
+          <figure><img src="images/fire01.webp" alt="Fire digital painting"></figure>
+          <figure><img src="images/2020_jillpainting.webp" alt="Portrait, digital painting"></figure>
+          <figure><img src="images/landscape.webp" alt="Landscape, digital painting"></figure>
+        </div>
+
+        <div class="lead-label">Vector &amp; 3D-digital</div>
+        <div class="trio">
+          <figure><img src="images/softbody.webp" alt="3D soft-body digital illustration"></figure>
+          <figure><img src="images/cog1.webp" alt="Mechanical cog vector illustration"></figure>
+          <figure><img src="images/space-banner1.jpg" alt="Space scene digital illustration"></figure>
         </div>
 
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ============ OTHER (FINE ART / ILLUSTRATION) — QUIET ROW ============ -->
-  <div class="other-link-row fade-in">
-    <a href="fine-art.html">Fine Art &mdash; Art Students League of New York</a>
-    <a href="illustration.html">Illustration</a>
+<!-- 04 — 3D & MOTION -->
+<section class="case" id="motion">
+  <div class="wrap">
+    <div class="case-head">
+      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>04</div>
+      <div>
+        <div class="case-title">3D &amp; motion</div>
+        <div class="case-sub">Form · light · things in motion</div>
+      </div>
+    </div>
+    <div class="case-body">
+
+      <div class="block full">
+        <div class="label mono">The thread</div>
+        <p>I design things that move and things with dimension — from these explorations to launch films, stage-opener animation, and 700+ photoreal product renders for the digital shelf. Thinking in <strong>motion and form</strong>, not just static frames, is half of how a new technology gets shown to people. <em>(The BOLD Breakthrough Tour below carries this into a full campaign.)</em></p>
+      </div>
+      <div class="jd-tag">
+        <span>3D rendering</span><span>motion design</span><span>animation</span><span>generative media</span>
+      </div>
+
+      <div class="shots">
+        <div class="lead-label">Motion — the Chessie campaign</div>
+        <div class="video">
+          <iframe src="https://player.vimeo.com/video/758432965?h=5548b168af&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Chessie motion 1"></iframe>
+        </div>
+        <div class="video-pair row-gap">
+          <div class="video"><iframe src="https://player.vimeo.com/video/758432983?title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Chessie motion 2"></iframe></div>
+          <div class="video"><iframe src="https://player.vimeo.com/video/758432997?h=6bc5f48665&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Chessie motion 3"></iframe></div>
+        </div>
+        <p class="gallery-cap"><strong>Motion &amp; trailer work — the Chessie campaign.</strong> Animation and product motion that bring brand moments to life across digital and social.</p>
+
+        <div class="lead-label">3D — particles &amp; form</div>
+        <div class="trio">
+          <figure><img src="images/particle017-main.webp" alt="3D particle render — physics, form, light"></figure>
+          <figure><img src="images/particle006-thumb.webp" alt="3D particle render"></figure>
+          <figure><img src="images/particle026-thumb.webp" alt="3D particle render"></figure>
+        </div>
+        <figcaption style="margin-top:12px;"><strong>3D — particles, physics, texture, light.</strong> Renders made to chase a feeling, a frame at a time.</figcaption>
+
+        <div class="lead-label">Experiments — particles in motion</div>
+        <p class="gallery-cap gallery-lead">I like to work in 3D — I love experimenting with particles and the interesting outputs that simulation can generate. These are some personal experiments playing with that.</p>
+        <div class="video-pair">
+          <div class="video"><iframe src="https://player.vimeo.com/video/885181792?title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Particle experiment — cell"></iframe></div>
+          <div class="video"><iframe src="https://player.vimeo.com/video/885189992?title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Particle experiment — atom"></iframe></div>
+          <div class="video"><iframe src="https://player.vimeo.com/video/885190039?title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Particle experiment — assemble"></iframe></div>
+          <div class="video"><iframe src="https://player.vimeo.com/video/885182010?title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Particle experiment — gold landscape"></iframe></div>
+        </div>
+        <p class="gallery-cap"><strong>Experimental particle &amp; physics studies</strong> — playing with simulation, force, and form. Hover any to play.</p>
+      </div>
+    </div>
   </div>
+</section>
 
-  <footer id="footer" class="section-2">
-    <div class="container w-container">
-      <div class="footer-column">
-        <ul role="list" class="footer-list w-list-unstyled">
-          <li class="footer-list-item">
-            <a href="https://www.linkedin.com/in/michaelscrivana89/" target="_blank" class="footer-link">LinkedIn</a>
-          </li>
-          <li class="footer-list-item">
-            <a href="https://www.instagram.com/michaelscrivana/" target="_blank" class="footer-link">Instagram</a>
-          </li>
-          <li class="footer-list-item">
-            <a href="index.html" class="footer-link">Work</a>
-          </li>
-          <li class="footer-list-item">
-            <a href="about.html" class="footer-link">About</a>
-          </li>
-          <li class="footer-list-item">
-            <a href="contact.html" class="footer-link">Contact</a>
-          </li>
-        </ul>
-        <div class="footer-flex-container">
-          <div id="w-node-_2bf0adcd-b6b5-f3a9-8935-0b70abf062fb-abf062c7" class="copyright-wrapper">
-            <div class="copyright-text">
-              <span class="copyright-link">&copy; 2026 Michael Scrivana</span>
-            </div>
-          </div>
+<!-- 05 — AI AS A CREATIVE MEDIUM -->
+<section class="case" id="ai">
+  <div class="wrap">
+    <div class="case-head">
+      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>05</div>
+      <div>
+        <div class="case-title">AI as a creative medium</div>
+        <div class="case-sub">Pushing what the tools can do · built in code</div>
+      </div>
+    </div>
+    <div class="case-body">
+
+      <div class="block">
+        <div class="label mono">In practice</div>
+        <p>I don't just use AI — I <strong>build with it</strong>. I prototype my own creative tools in code (React, media-generation models), stay close to the models as they change, and rewire my workflow around them. Last year I gave a talk, <em>"AI for Designers,"</em> teaching the practice to my team.</p>
+      </div>
+      <div class="block">
+        <div class="label mono">Why I love it</div>
+        <p>AI is just the newest material on my bench. The same instinct that pulled me from graphite to oil to clay to 3D pulls me here: a new medium shows up and I <em>have</em> to make something with it — and, increasingly, build the tool that makes it.</p>
+      </div>
+      <div class="jd-tag">
+        <span>AI as a medium</span><span>emerging tech</span><span>builds in code</span><span>making with technology</span>
+      </div>
+
+      <div class="shots">
+        <div class="lead-label">Act one — the tool I built</div>
+        <figure class="wide">
+          <img src="images/creativelab-canvas-oad-kids.jpg" alt="CreativeLab — the node-based React Flow canvas where designers compose generation pipelines">
+          <figcaption><strong>CreativeLab — the system, not a prompt box.</strong> Designers don't think in prompts; they think in <em>steps</em> — so I borrowed the visual grammar of node editors (React Flow) and built the tool around composition. Each node is a designed primitive: reference in, brand-rules check, generate, channel-fit, compliance, output. The user wires the graph; the graph runs.</figcaption>
+        </figure>
+        <figure class="wide">
+          <img src="images/creativelab-oad-kids-hero.jpg" alt="Channel-ready One A Day Kids hero generated in CreativeLab">
+          <figcaption><strong>What that graph produces</strong> — a channel-ready One A Day Kids hero. Nothing here was photographed; minutes from a real pack reference to a finished, on-brand frame.</figcaption>
+        </figure>
+        <figure class="wide">
+          <img src="images/creativelab-claritin-lifestyle.jpg" alt="Claritin lifestyle scene generated from the pack and brand colours">
+          <figcaption><strong>Brand lifestyle, channel-ready</strong> — built from Claritin's own pack and brand colours into an on-brand seasonal scene.</figcaption>
+        </figure>
+
+        <div class="lead-label">Act two — exploring with the tools · product visualization</div>
+        <div class="gallery-strip">
+          <figure><img src="images/Product-MJ001.webp" alt="Generative product render"></figure>
+          <figure><img src="images/Product-MJ002.webp" alt="Generative product render"></figure>
+          <figure><img src="images/Product-MJ003.webp" alt="Generative product render"></figure>
+          <figure><img src="images/Product-MJ004.webp" alt="Generative product render"></figure>
+          <figure><img src="images/Product-MJ007.webp" alt="Generative product render"></figure>
+          <figure><img src="images/Product-MJ016.webp" alt="Generative product render"></figure>
+        </div>
+        <p class="gallery-cap"><strong>Product visualization</strong> — generative renders that jump-start ideation: colour, form, and texture explored fast.</p>
+
+        <div class="lead-label">Storyboarding — narrative into image</div>
+        <div class="gallery-strip">
+          <figure><img src="images/Movie-MJ001.webp" alt="Generative storyboard frame"></figure>
+          <figure><img src="images/Movie-MJ005.webp" alt="Generative storyboard frame"></figure>
+          <figure><img src="images/Movie-MJ006.webp" alt="Generative storyboard frame"></figure>
+          <figure><img src="images/Movie-MJ007.webp" alt="Generative storyboard frame"></figure>
+          <figure><img src="images/Movie-MJ009.webp" alt="Generative storyboard frame"></figure>
+          <figure><img src="images/Movie-MJ010.webp" alt="Generative storyboard frame"></figure>
+        </div>
+        <p class="gallery-cap"><strong>Storyboarding</strong> — written narratives turned into vivid frames for stories and mood boards.</p>
+
+        <div class="lead-label">Science visuals — micro-cellular &amp; lucid</div>
+        <div class="gallery-strip">
+          <figure><img src="images/cell-MJ006.webp" alt="Generative cellular science visual"></figure>
+          <figure><img src="images/cell-MJ007.webp" alt="Generative cellular science visual"></figure>
+          <figure><img src="images/cell-MJ014.webp" alt="Generative cellular science visual"></figure>
+          <figure><img src="images/cell-MJ015.webp" alt="Generative cellular science visual"></figure>
+          <figure><img src="images/cell-MJ016.webp" alt="Generative cellular science visual"></figure>
+          <figure><img src="images/cell-MJ017.webp" alt="Generative cellular science visual"></figure>
+          <figure><img src="images/Lucid-MJ001.webp" alt="Generative lucid science visual"></figure>
+          <figure><img src="images/Lucid-MJ002.webp" alt="Generative lucid science visual"></figure>
+          <figure><img src="images/Lucid-MJ005.webp" alt="Generative lucid science visual"></figure>
+          <figure><img src="images/Lucid-MJ006.webp" alt="Generative lucid science visual"></figure>
+          <figure><img src="images/Lucid-MJ003.webp" alt="Generative lucid science visual"></figure>
+          <figure><img src="images/Lucid-MJ008.webp" alt="Generative lucid science visual"></figure>
+        </div>
+        <p class="gallery-cap"><strong>Science visuals</strong> — micro-cellular and abstract imagery from a decade designing in healthcare; the kind of generative work few portfolios can show.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 — EXPERIENCES / SPATIAL -->
+<section class="case" id="experience">
+  <div class="wrap">
+    <div class="case-head">
+      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>06</div>
+      <div>
+        <div class="case-title">Experiences you can walk through</div>
+        <div class="case-sub">The BOLD Breakthrough Tour · one idea, every medium</div>
+      </div>
+    </div>
+    <div class="case-body">
+
+      <div class="block full">
+        <div class="label mono">The point</div>
+        <p>The BOLD Breakthrough Tour is one idea taken across <strong>every medium it needed</strong> — identity, 3D, motion, a live stage, and the objects in your hand — and run for three years straight, held together by a single design system. It's the kind of integrated, end-to-end making I love most.</p>
+      </div>
+      <div class="jd-tag">
+        <span>integrated campaign</span><span>motion + 3D</span><span>live production</span><span>spatial / experiential</span>
+      </div>
+
+      <div class="shots">
+        <p class="gallery-cap gallery-lead"><strong>Three years of events below.</strong> What follows is work from across the full run — virtual, hybrid, and in-person — so you&rsquo;ll see different logo marks and identity treatments year to year. Same design system, three annual events.</p>
+
+        <div class="lead-label">Motion — the BOLD Ambition Tour films</div>
+        <figure class="wide">
+          <img src="images/BreakthroughBanner-3D.webp" alt="BOLD 3D event banner">
+          <figcaption>3D key-visual banner, built from the mark.</figcaption>
+        </figure>
+        <div class="video row-gap">
+          <iframe src="https://player.vimeo.com/video/758432920?h=5c5996087f&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="BOLD Ambition Tour motion 2"></iframe>
+        </div>
+        <div class="video row-gap">
+          <iframe src="https://player.vimeo.com/video/758433013?h=9f75855fc4&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="BOLD Ambition Tour motion 1"></iframe>
+        </div>
+        <p class="gallery-cap"><strong>Stage films &amp; animated identity</strong> — the motion that ran the room, built from the Cinema 4D storyboards below.</p>
+
+        <div class="lead-label">Cinema 4D storyboards &amp; animated identity</div>
+        <div class="trio">
+          <figure><img src="images/storyboard-01.webp" alt="Cinema 4D motion storyboard frame"></figure>
+          <figure><img src="images/storyboard-02.webp" alt="Cinema 4D motion storyboard frame"></figure>
+          <figure><img src="images/storyboard-03.webp" alt="Cinema 4D motion storyboard frame"></figure>
+        </div>
+        <div class="pair row-gap">
+          <figure><img src="images/notebook.webp" alt="BOLD branded notebook"><figcaption><strong>BOLD merch</strong> — identity carried into objects attendees took home.</figcaption></figure>
+          <figure><img src="images/shirtback.webp" alt="3D apparel render for the tour"><figcaption><strong>3D apparel render</strong> — the mark carried onto merch.</figcaption></figure>
+        </div>
+
+        <div class="lead-label">Three years on stage — virtual → hybrid → in-person</div>
+        <figure class="wide">
+          <img src="images/Agenda2-2.webp" alt="BOLD tour event agenda and stage design">
+          <figcaption><strong>Live production across three consecutive years</strong> for a 200+-attendee event — the tour evolved from virtual to hybrid to in-person, and the design system carried it the whole way.</figcaption>
+        </figure>
+        <div class="trio row-gap">
+          <figure><img src="images/Heart-slide.webp" alt="Stage presentation slide"></figure>
+          <figure><img src="images/Building-slide.webp" alt="Stage presentation slide"></figure>
+          <figure><img src="images/Personal-slide-copy.webp" alt="Stage presentation slide"></figure>
+        </div>
+        <figcaption style="margin-top:12px;">Stage and presentation design — the narrative beats the audience walked through.</figcaption>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 — FINE ART (closer) -->
+<section class="case" id="fineart">
+  <div class="wrap">
+    <div class="case-head">
+      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>07</div>
+      <div>
+        <div class="case-title">Fine art — where it started</div>
+        <div class="case-sub">Drawing · oil painting · sculpture, from life</div>
+      </div>
+    </div>
+    <div class="case-body">
+
+      <div class="block full">
+        <div class="label mono">Where it all started</div>
+        <p>Most designers stop at the screen. I started at the easel. The hand-skill — drawing, painting, and modeling from life — is the foundation everything else sits on. Seven years of commercial work later, it all still traces back to learning how to actually <em>see</em>.</p>
+      </div>
+      <div class="jd-tag">
+        <span>drawing</span><span>oil painting</span><span>sculpture</span><span>classically trained</span>
+      </div>
+
+      <div class="shots">
+        <div class="lead-label">Drawing — graphite &amp; charcoal</div>
+        <div class="trio">
+          <figure><img src="images/deerskull.webp" alt="Deer skull still-life drawing in graphite and charcoal"></figure>
+          <figure><img src="images/raven.webp" alt="Portrait of Raven in graphite"></figure>
+          <figure><img src="images/hand.webp" alt="Study of hands in graphite"></figure>
+        </div>
+        <p class="gallery-cap"><strong>From life — proportion, value, patience.</strong> Four years at the Art Students League of New York: render what you actually see, not what you think you know. It's the observational discipline under every design decision I make.</p>
+
+        <div class="lead-label">Oil painting</div>
+        <div class="pair">
+          <figure><img src="images/pleinair.webp" alt="Plein air oil painting"><figcaption>Plein air — colour and light, kept immediate.</figcaption></figure>
+          <figure><img src="images/colorstudy.webp" alt="Figure colour study in oil"><figcaption>Figure colour study — edges and mixing.</figcaption></figure>
+        </div>
+
+        <div class="lead-label">Sculpture — clay, modeled from life</div>
+        <div class="pair">
+          <figure><img src="images/bust1.webp" alt="Clay portrait bust"><figcaption>Portrait bust — form in three dimensions.</figcaption></figure>
+          <figure><img src="images/bust2.webp" alt="Clay portrait bust"><figcaption>The spatial sense that informs packaging and space.</figcaption></figure>
         </div>
       </div>
     </div>
-  </footer>
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=633023a7fd7ec6455091290f" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
-  <script src="js/animations.js"></script>
+  </div>
+</section>
+
+<!-- PLAY — INKJUMP RUNNER -->
+<section class="play" id="play">
+  <div class="wrap">
+    <div class="play-head">
+      <span class="mono eyebrow">P.S. — you scrolled the whole way</span>
+      <h2>Have a play.</h2>
+      <p><strong>Inkjump</strong> — a little runner I built by hand. <kbd>Space</kbd> / <kbd>&uarr;</kbd> / tap to jump.</p>
+    </div>
+    <div class="play-frame">
+      <canvas id="runner" aria-label="Inkjump — a paintbrush runner game"></canvas>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var canvas = document.getElementById('runner'); if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W = 920, H = 240, dpr = Math.min(window.devicePixelRatio || 1, 2);
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  canvas.style.aspectRatio = W + ' / ' + H;
+  ctx.scale(dpr, dpr);
+
+  var css = getComputedStyle(document.documentElement);
+  var INK = (css.getPropertyValue('--ink').trim() || '#0a0d12');
+  var INK2 = (css.getPropertyValue('--ink-2').trim() || '#45474f');
+  var ACCENT = (css.getPropertyValue('--accent').trim() || '#3a3a40');
+
+  var groundLine = H - 34, GRAV = 0.7;
+  var player, obstacles, trail, speed, score, hi, state, spawnIn, t, frame = 0;
+  hi = parseInt(localStorage.getItem('inkjump-hi') || '0', 10) || 0;
+
+  function reset() {
+    player = { x: 78, y: groundLine, vy: 0, w: 16, h: 44, rot: 0, onGround: true };
+    obstacles = []; trail = []; speed = 6; score = 0; spawnIn = 55; t = 0; state = 'ready';
+  }
+  reset();
+
+  function jump() {
+    if (state === 'over') { reset(); state = 'running'; return; }
+    if (state === 'ready') state = 'running';
+    if (player.onGround) { player.vy = -12; player.onGround = false; }
+  }
+
+  function spawn() {
+    if (Math.random() < 0.25) {
+      var ch = 28 + Math.random() * 28;
+      obstacles.push({ x: W + 10, w: 24, h: ch, type: 'cactus', arms: Math.random() < 0.5 ? 1 : 2 });
+      return;
+    }
+    var h = 20 + Math.random() * 34, w = 14 + Math.random() * 12;
+    obstacles.push({ x: W + 10, w: w, h: h, type: 'block' });
+    if (Math.random() < 0.22) obstacles.push({ x: W + 10 + w + 8, w: 13, h: 16 + Math.random() * 26, type: 'block' });
+  }
+
+  function rr(x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+
+  function drawBrush(p) {
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rot);
+    // bristle tip (touches ground at y=0)
+    ctx.fillStyle = INK;
+    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-7, -14); ctx.lineTo(7, -14); ctx.closePath(); ctx.fill();
+    // ferrule
+    ctx.fillStyle = INK2; ctx.fillRect(-7, -20, 14, 6);
+    // handle
+    ctx.fillStyle = ACCENT; rr(-5, -p.h, 10, p.h - 20, 4); ctx.fill();
+    ctx.restore();
+  }
+
+  function drawCactus(o) {
+    var x = o.x, base = groundLine;
+    ctx.fillStyle = INK;
+    rr(x + 7, base - o.h, 10, o.h, 2); ctx.fill();
+    if (o.arms >= 1) {
+      rr(x, base - o.h * 0.62, 8, 6, 2); ctx.fill();
+      rr(x, base - o.h * 0.62 - 14, 6, 14, 2); ctx.fill();
+    }
+    if (o.arms >= 2) {
+      rr(x + 16, base - o.h * 0.48, 8, 6, 2); ctx.fill();
+      rr(x + 18, base - o.h * 0.48 - 12, 6, 12, 2); ctx.fill();
+    }
+  }
+
+  function drawDino(x, ground, blink) {
+    ctx.fillStyle = INK2;
+    var gy = ground;
+    ctx.fillRect(x + 4,  gy - 22, 14, 18);
+    ctx.fillRect(x + 14, gy - 28, 16, 12);
+    ctx.fillRect(x,     gy - 16, 8,  6);
+    ctx.fillRect(x + 6,  gy - 4,  4,  4);
+    ctx.fillRect(x + 14, gy - 4,  4,  4);
+    ctx.fillStyle = INK;
+    if (blink) ctx.fillRect(x + 22, gy - 24, 4, 1);
+    else       ctx.fillRect(x + 23, gy - 25, 2, 2);
+  }
+
+  function pad(n) { return ('00000' + Math.floor(n)).slice(-5); }
+  function inView() { var r = canvas.getBoundingClientRect(); return r.top < window.innerHeight && r.bottom > 0; }
+
+  function loop() {
+    requestAnimationFrame(loop);
+    frame++;
+    var dinoBlink = Math.floor(frame / 80) % 6 === 5;
+    ctx.clearRect(0, 0, W, H);
+
+    // ground
+    ctx.strokeStyle = 'rgba(10,13,18,0.28)'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(0, groundLine + 1); ctx.lineTo(W, groundLine + 1); ctx.stroke();
+    ctx.fillStyle = 'rgba(10,13,18,0.16)';
+    var off = (t * speed) % 42;
+    for (var gx = -off; gx < W; gx += 42) ctx.fillRect(gx, groundLine + 8, 12, 2);
+
+    if (state === 'running') {
+      t++; score += speed * 0.02;
+      speed = Math.min(13, speed + 0.0016);
+      spawnIn--; if (spawnIn <= 0) { spawn(); spawnIn = Math.max(36, 92 - speed * 3 + Math.random() * 42); }
+    }
+
+    // physics
+    player.vy += GRAV; player.y += player.vy;
+    if (player.y >= groundLine) { player.y = groundLine; player.vy = 0; player.onGround = true; }
+    player.rot = player.onGround ? 0 : Math.max(-0.45, Math.min(0.45, player.vy * 0.03));
+
+    // ink trail
+    if (state === 'running' && player.onGround && t % 6 === 0)
+      trail.push({ x: player.x - 7, y: groundLine, a: 0.5, r: 2 + Math.random() * 2 });
+    for (var i = trail.length - 1; i >= 0; i--) {
+      var d = trail[i]; d.x -= speed; d.a -= 0.012;
+      if (d.a <= 0) { trail.splice(i, 1); continue; }
+      ctx.fillStyle = 'rgba(58,58,64,' + d.a + ')';
+      ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, 7); ctx.fill();
+    }
+
+    // obstacles + collision
+    for (var j = obstacles.length - 1; j >= 0; j--) {
+      var o = obstacles[j];
+      if (state === 'running') o.x -= speed;
+      if (o.x + o.w < -4) { obstacles.splice(j, 1); continue; }
+      if (o.type === 'cactus') drawCactus(o);
+      else { ctx.fillStyle = INK; rr(o.x, groundLine - o.h, o.w, o.h, 4); ctx.fill(); }
+      var pl = player.x - player.w / 2, prt = player.x + player.w / 2, oTop = groundLine - o.h;
+      if (prt > o.x + 2 && pl < o.x + o.w - 2 && player.y > oTop + 4 && state === 'running') {
+        state = 'over'; hi = Math.max(hi, Math.floor(score));
+        try { localStorage.setItem('inkjump-hi', hi); } catch (e) {}
+      }
+    }
+
+    drawBrush(player);
+
+    // score
+    ctx.fillStyle = INK2; ctx.font = '600 13px "JetBrains Mono", monospace'; ctx.textAlign = 'right';
+    ctx.fillText('HI ' + pad(hi) + '   ' + pad(score), W - 16, 26); ctx.textAlign = 'left';
+
+    if (state === 'ready') {
+      drawDino(W - 88, groundLine, dinoBlink);
+      ctx.fillStyle = INK2; ctx.textAlign = 'center';
+      ctx.font = '600 14px "JetBrains Mono", monospace';
+      ctx.fillText('press space / tap to play', W / 2, H / 2 - 8); ctx.textAlign = 'left';
+    } else if (state === 'over') {
+      ctx.fillStyle = INK; ctx.textAlign = 'center';
+      ctx.font = '700 20px "DM Sans", sans-serif';
+      ctx.fillText('Game over', W / 2, H / 2 - 10);
+      ctx.fillStyle = INK2; ctx.font = '600 12px "JetBrains Mono", monospace';
+      ctx.fillText('press space / tap to run it back', W / 2, H / 2 + 12); ctx.textAlign = 'left';
+    }
+  }
+  loop();
+
+  window.addEventListener('keydown', function (e) {
+    if (e.code === 'Space' || e.key === ' ' || e.key === 'ArrowUp') {
+      if (inView()) { e.preventDefault(); jump(); }
+    }
+  });
+  canvas.addEventListener('pointerdown', function (e) { e.preventDefault(); jump(); });
+})();
+</script>
+
+<footer>
+  <div class="wrap">
+    <div class="big">I'm a maker who loves technology. Let's make something.</div>
+    <div class="links">
+      <a href="mailto:mkscrivana@gmail.com">mkscrivana@gmail.com</a> &nbsp;·&nbsp;
+      <a href="https://www.michaelscrivana.com">michaelscrivana.com</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/michaelscrivana89/">linkedin</a> &nbsp;·&nbsp;
+      <a href="documents/Michael_Scrivana_Resume.pdf" target="_blank" rel="noopener">résumé (pdf)</a>
+    </div>
+    <div class="fine">Michael Scrivana · Selected work across disciplines · 2026<br>Some imagery is concept/pilot output, including AI-generated work.</div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+  <button class="lb-close" id="lbClose" type="button" aria-label="Close">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous image">&#8249;</button>
+  <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next image">&#8250;</button>
+  <img id="lbImg" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+(function () {
+  var lb = document.getElementById('lightbox'),
+      img = document.getElementById('lbImg'),
+      cap = document.getElementById('lbCap'),
+      closeBtn = document.getElementById('lbClose'),
+      prevBtn = document.getElementById('lbPrev'),
+      nextBtn = document.getElementById('lbNext'),
+      items = Array.prototype.slice.call(document.querySelectorAll('figure img')),
+      current = 0, lastFocus = null;
+
+  function render(i) {
+    current = (i + items.length) % items.length;       // wrap around
+    var el = items[current],
+        fig = el.closest('figure'),
+        figcap = fig ? fig.querySelector('figcaption') : null;
+    img.src = el.currentSrc || el.src; img.alt = el.alt || '';
+    if (figcap) { cap.innerHTML = figcap.innerHTML; cap.style.display = ''; }
+    else { cap.textContent = ''; cap.style.display = 'none'; }
+  }
+  function open(i) {
+    render(i);
+    lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lastFocus = document.activeElement; closeBtn.focus();
+  }
+  function close() {
+    lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = ''; img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  function step(d) { render(current + d); }
+
+  items.forEach(function (el, i) {
+    el.addEventListener('click', function () { open(i); });
+  });
+
+  closeBtn.addEventListener('click', close);
+  prevBtn.addEventListener('click', function (e) { e.stopPropagation(); step(-1); });
+  nextBtn.addEventListener('click', function (e) { e.stopPropagation(); step(1); });
+  // Click on the backdrop (empty area) closes; clicks on image/caption/buttons don't
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') step(-1);
+    else if (e.key === 'ArrowRight') step(1);
+  });
+})();
+</script>
+
+<script>
+/* ── Hero tool cycle — names the tech, not "new technology" ── */
+(function () {
+  var slot = document.getElementById('toolSlot');
+  if (!slot) return;
+  var tools = ['AI', '3D', 'code', 'generative tools', 'motion'];
+  var i = 0;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { slot.textContent = 'AI · 3D · code'; return; }
+  setInterval(function () {
+    slot.classList.add('is-changing');
+    setTimeout(function () {
+      i = (i + 1) % tools.length;
+      slot.textContent = tools[i];
+      slot.classList.remove('is-changing');
+    }, 280);
+  }, 2800);
+})();
+</script>
+
+<script>
+/* ── The trilogy: reduced-motion guard · ink scroll-reveal · wet-ink cursor ── */
+(function () {
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* 1 — Scroll reveal ("ink wipe" on headings, fade-rise on the rest) */
+  if (!reduce && 'IntersectionObserver' in window) {
+    var fade = document.querySelectorAll('.case-num, .case-sub, .case .shots > *, .case .block, .case .jd-tag, .play-head, .play-frame');
+    var wipe = document.querySelectorAll('.case-title, .thesis p');
+    fade.forEach(function (el) { el.classList.add('reveal'); });
+    wipe.forEach(function (el) { el.classList.add('reveal-wipe'); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    fade.forEach(function (el) { io.observe(el); });
+    wipe.forEach(function (el) { io.observe(el); });
+  }
+
+})();
+</script>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+/* ── Play Vimeo reels on hover (muted preview) · mouse + non-reduced-motion only ── */
+(function () {
+  if (!window.Vimeo) return;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (reduce || !fine) return;   // touch / reduced-motion: leave as click-to-play
+  document.querySelectorAll('.video').forEach(function (box) {
+    var iframe = box.querySelector('iframe'); if (!iframe) return;
+    var player = new Vimeo.Player(iframe);
+    player.setVolume(0);
+    box.addEventListener('mouseenter', function () { player.play().catch(function () {}); });
+    box.addEventListener('mouseleave', function () { player.pause().catch(function () {}); });
+  });
+})();
+</script>
+
 </body>
 </html>
