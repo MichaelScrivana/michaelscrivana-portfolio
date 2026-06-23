@@ -67,15 +67,17 @@ body {
 }
 .topnav .brand .logo { height: 22px; width: auto; display: block; flex: none; }
 .topnav .brand .brand-name { letter-spacing: var(--tight); }
-.topnav .links { display: flex; align-items: center; gap: 18px; }
+.topnav .links { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
 .topnav .links a {
-  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em;
-  font-size: 11px; font-weight: 500; color: var(--ink-3); text-decoration: none; transition: color .15s;
+  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em;
+  font-size: 10px; font-weight: 500; color: var(--ink-3); text-decoration: none; transition: color .15s;
+  white-space: nowrap;
 }
 .topnav .links a:hover { color: var(--accent); }
 .topnav .links a.contact { color: var(--accent); }
 .topnav .links a.resume { color: var(--accent); font-weight: 600; }
 @media (max-width: 860px) { .topnav .links a.case-link { display: none; } }
+@media (max-width: 1080px) { .topnav .brand .brand-name { display: none; } }
 
 /* ── HERO ── */
 header.hero { padding: 84px 0 52px; border-bottom: 1px solid var(--border); }
@@ -276,12 +278,12 @@ figure img { cursor: zoom-in; }
     <a class="brand" href="/"><img class="logo" src="images/ms-logo-m.png" alt="" width="42" height="22"><span class="brand-name">Michael Scrivana</span></a>
     <div class="links">
       <a class="case-link" href="#campaign">Campaign</a>
-      <a class="case-link" href="#commerce">Ecommerce</a>
-      <a class="case-link" href="#poster">Poster &amp; Illustration</a>
-      <a class="case-link" href="#motion">3D &amp; Motion</a>
-      <a class="case-link" href="#ai">AI as Medium</a>
-      <a class="case-link" href="#experience">Experiences</a>
-      <a class="case-link" href="#fineart">Fine Art</a>
+      <a class="case-link" href="#commerce">Commerce</a>
+      <a class="case-link" href="#poster">Poster</a>
+      <a class="case-link" href="#motion">Motion</a>
+      <a class="case-link" href="#ai">AI</a>
+      <a class="case-link" href="#experience">Live</a>
+      <a class="case-link" href="#fineart">Art</a>
       <a class="resume" href="resume.html">Résumé</a>
       <a class="contact" href="mailto:mkscrivana@gmail.com">Contact</a>
     </div>
