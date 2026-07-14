@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bench — one gesture, every material · Michael Scrivana</title>
+<meta name="description" content="A speculative project: the same pinch-grip hand carried from charcoal and clay through 3D, motion, and generative AI — testing what survives when the medium changes.">
+<meta content="The Bench — one gesture, every material" property="og:title">
+<meta content="A maker documents one hand across every material on his bench. AI is the last step, not the premise." property="og:description">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://creative.michaelscrivana.com/bench.html">
+<meta property="og:image" content="https://creative.michaelscrivana.com/images/bench/bench-flat-lay.jpg">
+<meta content="summary_large_image" name="twitter:card">
+<meta name="twitter:title" content="The Bench — one gesture, every material">
+<meta name="twitter:description" content="One pinch-grip hand from charcoal to clay to 3D to motion to AI — a speculative study in translation.">
+<meta name="twitter:image" content="https://creative.michaelscrivana.com/images/bench/bench-flat-lay.jpg">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/webclip.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* PX Design System — craft / graphite accent (matches index.html) */
+:root {
+  --px-bg:          #f6f7f9;
+  --px-surface:     #ffffff;
+  --px-surface-2:   #eceef1;
+  --px-surface-3:   #dde0e6;
+  --px-surface-4:   #c9cdd5;
+  --px-accent:       #3a3a40;
+  --px-accent-deep:  #26262b;
+  --px-accent-hover: #52525a;
+  --px-accent-2:     #5c5c64;
+  --px-accent-dim:   rgba(58, 58, 64, 0.08);
+  --px-accent-glow:  rgba(58, 58, 64, 0.18);
+  --px-text:    #0a0d12;
+  --px-text-2:  #45474f;
+  --px-text-3:  #80828c;
+  --px-text-4:  #a8aab2;
+  --px-border:    rgba(10, 13, 18, 0.10);
+  --px-border-2:  rgba(10, 13, 18, 0.14);
+  --px-border-3:  rgba(10, 13, 18, 0.24);
+  --px-font:  'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --px-mono:  'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  --px-track-tight:    -0.025em;
+  --px-track-body:     -0.005em;
+  --px-track-mono:     0.14em;
+  --px-track-mono-lg:  0.18em;
+  --px-radius:     14px;
+  --px-radius-sm:  10px;
+  --px-radius-xs:  6px;
+  --px-shadow-sm:    0 1px 2px -1px rgba(10, 13, 18, 0.08);
+  --px-shadow:       0 4px 16px -8px rgba(10, 13, 18, 0.12);
+  --px-shadow-lg:    0 8px 32px -12px rgba(10, 13, 18, 0.18);
+  --px-ease:  cubic-bezier(0.2, 0, 0, 1);
+  --px-dur:   160ms;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: radial-gradient(ellipse 70% 40% at 50% -8%, var(--px-accent-dim), transparent 60%), var(--px-bg);
+  color: var(--px-text); font-family: var(--px-font); font-size: 17px; line-height: 1.65;
+  font-weight: 400; letter-spacing: var(--px-track-body);
+  -webkit-font-smoothing: antialiased; min-height: 100vh;
+}
+::selection { background: var(--px-accent); color: #fff; }
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 18px 40px; display: flex; justify-content: space-between; align-items: center;
+  background: rgba(246, 247, 249, 0.82); backdrop-filter: blur(20px) saturate(140%);
+  border-bottom: 1px solid var(--px-border);
+}
+nav .name { font-size: 14px; font-weight: 500; color: var(--px-text); text-decoration: none; }
+nav .name .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--px-accent); margin-right: 10px; vertical-align: middle; }
+nav .back { font-family: var(--px-mono); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: var(--px-track-mono); color: var(--px-text-3); text-decoration: none; transition: color var(--px-dur) var(--px-ease); }
+nav .back:hover { color: var(--px-text); }
+.px-eyebrow { font-family: var(--px-mono); text-transform: uppercase; letter-spacing: var(--px-track-mono-lg); font-size: 11px; font-weight: 500; color: var(--px-accent); }
+.hero { padding: 150px 40px 40px; max-width: 880px; margin: 0 auto; }
+.hero-eyebrow { margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s var(--px-ease) 0.15s forwards; }
+.hero h1 { font-size: clamp(40px, 5.6vw, 66px); font-weight: 700; line-height: 1.06; letter-spacing: var(--px-track-tight); margin-bottom: 30px; opacity: 0; animation: fadeUp 0.9s var(--px-ease) 0.3s forwards; }
+.hero h1 em { font-style: italic; font-weight: 400; color: var(--px-accent); }
+.hero-subtitle { font-size: 19px; line-height: 1.6; color: var(--px-text-2); max-width: 660px; opacity: 0; animation: fadeUp 0.9s var(--px-ease) 0.45s forwards; }
+.hero-divider { height: 1px; background: var(--px-border); margin: 48px 0 28px; opacity: 0; animation: fadeIn 0.9s var(--px-ease) 0.6s forwards; }
+.hero-meta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; opacity: 0; animation: fadeUp 0.9s var(--px-ease) 0.7s forwards; }
+.hero-meta dt { font-family: var(--px-mono); text-transform: uppercase; letter-spacing: var(--px-track-mono); font-size: 10.5px; font-weight: 500; color: var(--px-text-3); margin-bottom: 6px; }
+.hero-meta dd { font-size: 15px; color: var(--px-text); }
+.hero-feature { max-width: 1120px; margin: 44px auto 0; padding: 0 40px; opacity: 0; animation: fadeUp 0.9s var(--px-ease) 0.8s forwards; }
+.hero-feature figure { margin: 0; }
+.hero-feature img { width: 100%; height: auto; display: block; border-radius: var(--px-radius); border: 1px solid var(--px-border-2); box-shadow: var(--px-shadow-lg); background: var(--px-surface); }
+.hero-feature figcaption { font-size: 13.5px; color: var(--px-text-3); margin-top: 14px; line-height: 1.55; text-align: center; }
+.hero-feature figcaption strong { color: var(--px-text-2); font-weight: 600; }
+section.essay { padding: 0 40px; max-width: 720px; margin: 0 auto; }
+.section-spacer { height: 88px; }
+.section-spacer-sm { height: 48px; }
+.essay-head { margin-bottom: 24px; }
+.essay-head .px-eyebrow { display: block; margin-bottom: 16px; }
+.essay-head h2 { font-size: clamp(28px, 3.4vw, 38px); font-weight: 600; line-height: 1.18; letter-spacing: -0.02em; }
+.essay-head h2 em { font-style: italic; font-weight: 400; }
+.essay-body p { font-size: 17px; line-height: 1.7; margin-bottom: 20px; }
+.essay-body p:last-child { margin-bottom: 0; }
+.essay-body p.lead { font-size: 19px; line-height: 1.6; color: var(--px-text-2); margin-bottom: 32px; }
+.essay-body em { font-style: italic; }
+.essay-body strong { font-weight: 600; }
+.pullquote { border-left: 3px solid var(--px-accent); padding: 4px 0 4px 28px; margin: 36px 0; font-size: clamp(20px, 2.4vw, 24px); line-height: 1.4; font-weight: 500; letter-spacing: -0.015em; }
+.pullquote em { font-style: italic; font-weight: 400; color: var(--px-accent); }
+.figblock { max-width: 1000px; margin: 40px auto; padding: 0 40px; }
+.figlabel { font-family: var(--px-mono); text-transform: uppercase; letter-spacing: var(--px-track-mono); font-size: 10.5px; font-weight: 600; color: var(--px-text-3); margin-bottom: 14px; display: block; }
+figure { margin: 0; }
+figure img { width: 100%; height: auto; display: block; border-radius: var(--px-radius); border: 1px solid var(--px-border-2); background: var(--px-surface); box-shadow: var(--px-shadow); cursor: zoom-in; }
+figcaption { font-size: 13.5px; color: var(--px-text-3); margin-top: 13px; line-height: 1.55; }
+figcaption strong { color: var(--px-text-2); font-weight: 600; }
+.fig-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.fig-trio { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.fig-quad { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.fig-pair figcaption, .fig-trio figcaption, .fig-quad figcaption { margin-top: 10px; font-size: 12.5px; }
+.moodboards { margin-top: 0; }
+.moodboards-intro { max-width: 720px; margin: 0 auto 32px; padding: 0 40px; font-size: 17px; line-height: 1.7; color: var(--px-text-2); }
+.mood-board { margin-bottom: 40px; }
+.mood-board:last-child { margin-bottom: 0; }
+.mood-board-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+.mood-board-head .kind { font-family: var(--px-mono); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: var(--px-track-mono); color: var(--px-accent); background: var(--px-accent-dim); border: 1px solid rgba(58,58,64,0.14); border-radius: 100px; padding: 5px 10px; }
+.mood-board-head h3 { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: var(--px-text); }
+.mood-board-note { font-size: 13.5px; line-height: 1.55; color: var(--px-text-3); margin-top: 12px; max-width: 72ch; }
+.mood-board-note strong { color: var(--px-text-2); font-weight: 600; }
+.dead-end { border-color: rgba(180, 60, 40, 0.35); }
+.dead-end figcaption::before { content: 'Dead end · '; font-family: var(--px-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: #b43c28; font-weight: 600; }
+@media (max-width: 720px) { .fig-pair, .fig-trio, .fig-quad { grid-template-columns: 1fr; } }
+.px-video { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--px-radius); overflow: hidden; border: 1px solid var(--px-border-2); box-shadow: var(--px-shadow); background: #0a0d12; }
+.px-video iframe, .px-video video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; object-fit: cover; }
+.pipeline { max-width: 1000px; margin: 40px auto; padding: 0 40px; }
+.pipeline-context { display: inline-flex; align-items: center; gap: 10px; font-family: var(--px-mono); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: var(--px-track-mono); color: var(--px-accent-deep); background: var(--px-accent-dim); border: 1px solid rgba(58,58,64,0.18); border-radius: 100px; padding: 7px 14px; margin-bottom: 22px; }
+.pipeline-context .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--px-accent); }
+.pipeline-flow { display: flex; flex-wrap: wrap; align-items: stretch; }
+.pipe-node { flex: 1 1 130px; min-width: 130px; background: var(--px-surface); border: 1px solid var(--px-border-2); border-radius: var(--px-radius-sm); padding: 16px; box-shadow: var(--px-shadow-sm); }
+.pipe-node .kind { font-family: var(--px-mono); font-size: 9.5px; font-weight: 600; text-transform: uppercase; letter-spacing: var(--px-track-mono); color: var(--px-accent); margin-bottom: 8px; }
+.pipe-node .title { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.pipe-node .why { font-size: 12.5px; line-height: 1.5; color: var(--px-text-2); }
+.pipe-arrow { flex: 0 0 28px; display: flex; align-items: center; justify-content: center; color: var(--px-text-4); font-size: 18px; }
+@media (max-width: 720px) { .pipeline-flow { flex-direction: column; } .pipe-arrow { height: 26px; transform: rotate(90deg); } }
+.stats { max-width: 1000px; margin: 44px auto; padding: 0 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.stat { background: var(--px-surface); border: 1px solid var(--px-border-2); padding: 28px 24px; }
+.stat:first-child { border-radius: var(--px-radius-sm) 0 0 var(--px-radius-sm); }
+.stat:last-child { border-radius: 0 var(--px-radius-sm) var(--px-radius-sm) 0; }
+.stat + .stat { border-left: none; }
+.stat .num { font-size: clamp(28px, 3.4vw, 42px); font-weight: 700; line-height: 1; letter-spacing: -0.02em; margin-bottom: 10px; }
+.stat .num em { font-style: normal; color: var(--px-accent); }
+.stat .lbl { font-size: 14px; line-height: 1.5; color: var(--px-text-2); }
+@media (max-width: 720px) { .stats { grid-template-columns: 1fr; } .stat + .stat { border-left: 1px solid var(--px-border-2); border-top: none; } }
+.speculative { margin-top: 28px; }
+.spec-block { padding: 30px 0; border-top: 1px solid var(--px-border); }
+.spec-block:last-child { border-bottom: 1px solid var(--px-border); }
+.spec-block h3 { font-size: 20px; font-weight: 600; line-height: 1.3; margin-bottom: 12px; display: flex; align-items: baseline; gap: 14px; }
+.spec-block h3 .num { font-family: var(--px-mono); font-size: 11px; font-weight: 500; letter-spacing: var(--px-track-mono); color: var(--px-accent); text-transform: uppercase; }
+.spec-block p { font-size: 16px; line-height: 1.7; color: var(--px-text-2); }
+.closing { padding: 0 40px; max-width: 640px; margin: 96px auto 0; text-align: center; }
+.closing-mark { width: 36px; height: 1px; background: var(--px-accent); margin: 0 auto 32px; }
+.closing p { font-style: italic; font-size: clamp(20px, 2.4vw, 24px); line-height: 1.5; letter-spacing: -0.015em; }
+.closing p::before { content: '\201C'; color: var(--px-accent); margin-right: 2px; }
+.closing p::after  { content: '\201D'; color: var(--px-accent); margin-left: 2px; }
+footer { margin-top: 110px; padding: 48px 40px 64px; max-width: 1120px; margin-left: auto; margin-right: auto; border-top: 1px solid var(--px-border); display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+.foot-col { display: flex; flex-direction: column; gap: 10px; }
+.foot-col .label { font-family: var(--px-mono); text-transform: uppercase; letter-spacing: var(--px-track-mono); font-size: 10.5px; font-weight: 500; color: var(--px-text-3); margin-bottom: 4px; }
+.foot-col a { font-size: 14px; color: var(--px-text); text-decoration: none; transition: color var(--px-dur) var(--px-ease); }
+.foot-col a:hover { color: var(--px-accent); }
+.foot-col .mono { font-family: var(--px-mono); font-size: 12.5px; }
+.foot-col.right { text-align: right; }
+.foot-col.right .copy { font-family: var(--px-mono); text-transform: uppercase; letter-spacing: var(--px-track-mono); font-size: 10.5px; color: var(--px-text-3); }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s var(--px-ease), transform 0.7s var(--px-ease); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.lightbox { position: fixed; inset: 0; z-index: 200; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 4vh 4vw; background: rgba(10, 13, 18, 0.92); backdrop-filter: blur(6px); opacity: 0; visibility: hidden; transition: opacity .22s ease, visibility .22s ease; cursor: zoom-out; }
+.lightbox.open { opacity: 1; visibility: visible; }
+.lightbox img { max-width: 92vw; max-height: 84vh; object-fit: contain; border-radius: 10px; box-shadow: 0 30px 80px -30px rgba(0,0,0,0.8); background: var(--px-surface); cursor: default; }
+.lightbox .lb-cap { max-width: 70ch; text-align: center; color: rgba(255,255,255,0.78); font-size: 13.5px; line-height: 1.55; }
+.lightbox .lb-cap strong { color: #fff; font-weight: 600; }
+.lightbox .lb-close { position: fixed; top: 18px; right: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.06); color: #fff; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.lightbox .lb-nav { position: fixed; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.06); color: #fff; font-size: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.lightbox .lb-prev { left: 18px; }
+.lightbox .lb-next { right: 18px; }
+@media (max-width: 900px) { .hero-meta { grid-template-columns: 1fr; } footer { grid-template-columns: 1fr; } .foot-col.right { text-align: left; } .hero-feature, .figblock, .pipeline, .stats { padding-left: 24px; padding-right: 24px; } }
+@media (max-width: 640px) { nav { padding: 14px 20px; } .hero { padding: 124px 20px 40px; } section.essay { padding: 0 20px; } .closing { padding: 0 20px; } footer { padding: 40px 20px 48px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal, .hero-eyebrow, .hero h1, .hero-subtitle, .hero-divider, .hero-meta, .hero-feature { opacity: 1 !important; animation: none !important; transform: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="name"><span class="dot"></span>Michael Scrivana</a>
+  <a href="index.html#bench" class="back">&larr; Back to work</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow px-eyebrow">Speculative &middot; The Bench</div>
+  <h1>One gesture. <em>Every material.</em></h1>
+  <p class="hero-subtitle">I wanted to test something simple: if I fix a single idea &mdash; one hand, one pinch-grip &mdash; and run it through every medium on my bench, what survives the translation? Up front, AI mood boards set direction for each material. Then charcoal, clay, 3D, and motion do the real making. Generative explorations close the loop.</p>
+  <div class="hero-divider"></div>
+  <dl class="hero-meta">
+    <div><dt>Gesture</dt><dd>Pinch-grip &mdash; thumb and index meeting under tension</dd></div>
+    <div><dt>Fixed</dt><dd>Asymmetric spread, tendon tension, upper-left light</dd></div>
+    <div><dt>Read time</dt><dd>6 minutes</dd></div>
+  </dl>
+</div>
+
+<div class="hero-feature">
+  <figure>
+    <img src="images/bench/bench-flat-lay.jpg" alt="The bench flat-lay — charcoal study, clay maquette, 3D render, particle study, and generative frame in one row">
+    <figcaption><strong>The bench.</strong> Five materials, one gesture left to right: charcoal, clay, 3D, particles, generative. Each step translates the last; none replaces it.</figcaption>
+  </figure>
+</div>
+
+<div class="section-spacer-sm"></div>
+
+<!-- UP FRONT — AI MOOD BOARDS -->
+<div class="figblock reveal moodboards">
+  <span class="figlabel">Up front &middot; AI mood boards</span>
+  <p class="moodboards-intro">Before I touch charcoal or clay, I run a mood board for each material &mdash; fast generative passes to answer <em>what should this feel like?</em> not <em>what is the final image?</em> The boards set light, gesture, volume, palette, and motion grammar. The physical work proves or kills each direction.</p>
+  <figure style="margin-bottom:40px;">
+    <img src="images/bench/mood-boards-hero.jpg" alt="Four AI mood boards in a row — fine art, sculpture, color, and motion">
+    <figcaption><strong>Four boards, one gesture.</strong> Fine art, sculpture, color, motion &mdash; each a directional pass before the material work begins.</figcaption>
+  </figure>
+
+  <div class="mood-board">
+    <div class="mood-board-head"><span class="kind">Board 01</span><h3>Fine art &mdash; value, edge, gesture</h3></div>
+    <div class="fig-trio">
+      <figure><img src="images/bench/mood-fineart-1.webp" alt="Fine art mood board — charcoal value range, upper-left light on a hand"></figure>
+      <figure><img src="images/bench/mood-fineart-2.webp" alt="Fine art mood board — tendon tension and knuckle compression"></figure>
+      <figure><img src="images/bench/mood-fineart-3.webp" alt="Fine art mood board — pinch geometry reference"></figure>
+    </div>
+    <p class="mood-board-note"><strong>Held:</strong> upper-left light, pinch read, charcoal value range. <strong>Let drift:</strong> background, skin texture. This board sat next to the easel while I drew.</p>
+  </div>
+
+  <div class="mood-board">
+    <div class="mood-board-head"><span class="kind">Board 02</span><h3>Sculpture &mdash; volume, thumb-index meeting, scale</h3></div>
+    <div class="fig-trio">
+      <figure><img src="images/bench/mood-sculpture-1.webp" alt="Sculpture mood board — organic volume and compressed knuckles"></figure>
+      <figure><img src="images/bench/mood-sculpture-2.webp" alt="Sculpture mood board — palm-up form and edge merge"></figure>
+      <figure><img src="images/bench/mood-sculpture-3.webp" alt="Sculpture mood board — hand-scale maquette direction"></figure>
+    </div>
+    <p class="mood-board-note"><strong>Held:</strong> palm-up pinch, meeting point as hero, hand scale not bust scale. <strong>Let drift:</strong> surface pitting, material finish. Killed the bust-scale instinct before I wasted clay.</p>
+  </div>
+
+  <div class="mood-board">
+    <div class="mood-board-head"><span class="kind">Board 03</span><h3>Color &mdash; temperature, skin, atmosphere</h3></div>
+    <div class="fig-trio">
+      <figure><img src="images/bench/mood-color-1.webp" alt="Color mood board — warm-cool split on skin tones"></figure>
+      <figure><img src="images/bench/mood-color-2.webp" alt="Color mood board — muted atmospheric palette"></figure>
+      <figure><img src="images/bench/mood-color-3.webp" alt="Color mood board — dramatic warm key light"></figure>
+    </div>
+    <p class="mood-board-note"><strong>Held:</strong> value structure from the charcoal keeper. <strong>Let drift:</strong> palette temperature, environmental colour. The board travels into 3D lighting and the final generative pass.</p>
+  </div>
+
+  <div class="mood-board">
+    <div class="mood-board-head"><span class="kind">Board 04</span><h3>Motion &mdash; assemble, dissolve, return</h3></div>
+    <div class="fig-trio">
+      <figure><img src="images/bench/mood-motion-1.webp" alt="Motion mood board — hand resolving from particles"></figure>
+      <figure><img src="images/bench/mood-motion-2.webp" alt="Motion mood board — gesture mid-dissolve"></figure>
+      <figure><img src="images/bench/mood-motion-3.webp" alt="Motion mood board — capstone frame rhythm"></figure>
+    </div>
+    <p class="mood-board-note"><strong>Held:</strong> pinch silhouette readable through abstraction. <strong>Let drift:</strong> frame pacing, particle density. Storyboard grammar for the capstone edit before I opened the timeline.</p>
+  </div>
+</div>
+
+<div class="section-spacer"></div>
+
+<!-- 00 — THESIS -->
+<section class="essay reveal">
+  <div class="essay-head">
+    <span class="px-eyebrow">00 &middot; Thesis</span>
+    <h2>The bench is where ideas <em>become things.</em></h2>
+  </div>
+  <div class="essay-body">
+    <p class="lead">Every medium I've picked up lives on the same surface &mdash; graphite, oil, clay, a screen, a node graph. Materials don't replace each other; they <strong>translate</strong> what the last one found.</p>
+    <p>This project is deliberately not client work. It's a personal experiment: take one object I know from the inside out &mdash; my own hand in a maker's pinch &mdash; and ask what has to stay true when charcoal becomes clay becomes pixels becomes motion becomes a model's guess. The answer I'm looking for isn't a beautiful final frame. It's a <em>legible chain of decisions</em> a reviewer can follow.</p>
+    <div class="pullquote">Fix the gesture. Let each material add something the last one couldn't.</div>
+  </div>
+</section>
+
+<div class="section-spacer"></div>
+
+<!-- 01 — THE SPARK -->
+<section class="essay reveal">
+  <div class="essay-head">
+    <span class="px-eyebrow">01 &middot; The spark</span>
+    <h2>Why the <em>hand?</em></h2>
+  </div>
+  <div class="essay-body">
+    <p class="lead">Because it's the one tool that's been on every bench I've ever worked at.</p>
+    <p>At the Art Students League it held charcoal and measured proportion. In a Michelin kitchen it held a knife and judged heat by feel. On a packaging table it holds a pencil and a scale model. At a keyboard it wires graphs and writes prompts. The hand isn't a subject I chose for drama &mdash; it's the constant behind every other medium.</p>
+    <p>I locked one gesture: a <strong>pinch-grip</strong> &mdash; thumb and index meeting, middle finger curled, tension visible in the tendon at the wrist, weight settled in the heel of the palm. Asymmetric finger spread. Light from the upper left. Those four things had to survive every translation. Everything else was negotiable.</p>
+    <p>The design question underneath: <em>what is the idea, and what is just the material talking?</em> If the pinch reads in charcoal but disappears in clay, that's a failure of translation, not of craft.</p>
+  </div>
+</section>
+
+<div class="pipeline reveal">
+  <span class="pipeline-context"><span class="dot"></span>What had to survive &mdash; every step</span>
+  <div class="pipeline-flow">
+    <div class="pipe-node"><div class="kind">Fixed</div><div class="title">Pinch geometry</div><div class="why">Thumb-index meeting point and the angle between them.</div></div>
+    <div class="pipe-arrow">&rarr;</div>
+    <div class="pipe-node"><div class="kind">Fixed</div><div class="title">Tension</div><div class="why">Tendon at the wrist, knuckle compression &mdash; the hand working, not resting.</div></div>
+    <div class="pipe-arrow">&rarr;</div>
+    <div class="pipe-node"><div class="kind">Fixed</div><div class="title">Asymmetry</div><div class="why">Fingers don't fall in parallel; the spread is particular to this grip.</div></div>
+    <div class="pipe-arrow">&rarr;</div>
+    <div class="pipe-node"><div class="kind">Fixed</div><div class="title">Light</div><div class="why">Upper-left source &mdash; carries from charcoal through to generated frames.</div></div>
+  </div>
+</div>
+
+<div class="section-spacer"></div>
+
+<!-- 02 — PHYSICAL -->
+<section class="essay reveal">
+  <div class="essay-head">
+    <span class="px-eyebrow">02 &middot; Physical</span>
+    <h2>See it <em>first.</em></h2>
+  </div>
+  <div class="essay-body">
+    <p class="lead">Charcoal before clay. Always. You have to earn the volume by understanding the line.</p>
+    <p>The <strong>fine art mood board</strong> was on the wall next to the easel &mdash; value range, light direction, gesture. I started with my left hand on the bench, lit from a single window. Graphite first &mdash; loose placement, then value structure. The early study from art school (<a href="fine-art.html">fine-art.html</a>) was the anchor: I'd drawn hands before, but never with a translation test in mind.</p>
+    <p>Charcoal &rarr; clay: I gained <strong>volume and edge</strong> in three dimensions. I lost some of the line specificity &mdash; a knuckle that read cleanly in graphite became a soft merge in clay if I wasn't careful. The decision: model the pinch at small scale, palm-up, so the thumb-index meeting point stays the hero. Portrait-bust scale was a dead end (see below).</p>
+  </div>
+</section>
+
+<div class="figblock reveal">
+  <span class="figlabel">Charcoal — the keeper and the overworked pass</span>
+  <div class="fig-pair">
+    <figure>
+      <img src="images/bench/charcoal-hand-v1.webp" alt="Charcoal study of a pinch-grip hand — thumb and index meeting, tendon tension at the wrist">
+      <figcaption><strong>Keeper.</strong> Pinch-grip on newsprint — asymmetric spread, upper-left light, tendon visible. This is the reference every later step inherits.</figcaption>
+    </figure>
+    <figure class="dead-end">
+      <img src="images/bench/charcoal-hand-dead-end.webp" alt="Overworked charcoal still life — wrong subject scale, edges fought">
+      <figcaption><strong>Session two.</strong> I spent a full sitting on a larger still-life setup trying to &ldquo;match the drama&rdquo; of the hand with more objects in frame. Overworked edges, lost the gesture. Scrapped it.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="figblock reveal">
+  <span class="figlabel">Clay — maquette and wrong scale</span>
+  <div class="fig-pair">
+    <figure>
+      <img src="images/bench/clay-hand-maquette.webp" alt="Small clay maquette of a hand in pinch-grip, palm up">
+      <figcaption><strong>Maquette.</strong> Palm-up pinch at hand scale — thumb-index meeting point preserved, knuckles compressed. Volume the charcoal couldn't give me.</figcaption>
+    </figure>
+    <figure class="dead-end">
+      <img src="images/bench/clay-hand-dead-end-scale.webp" alt="Clay portrait bust at larger scale — wrong proportion for the translation test">
+      <figcaption><strong>Wrong scale.</strong> I started at bust scale out of habit from the League. The gesture drowned in proportion study. Rescaled to a palm-sized maquette.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="section-spacer"></div>
+
+<!-- 03 — DIGITAL -->
+<section class="essay reveal">
+  <div class="essay-head">
+    <span class="px-eyebrow">03 &middot; Digital</span>
+    <h2>Volume without losing the <em>drawing.</em></h2>
+  </div>
+  <div class="essay-body">
+    <p class="lead">The 3D pass wasn't a scan-and-done. It was an interpretation.</p>
+    <p>The <strong>sculpture and color boards</strong> sat open on the second monitor &mdash; volume targets and palette temperature while I modeled. I photographed the maquette from four angles and rebuilt the form in 3D &mdash; not photogrammetry-for-its-own-sake, but a <strong>modeler's reading</strong> of what the clay found. The pinch geometry and tendon tension had to survive; surface detail could simplify.</p>
+    <p>Clay &rarr; particles: this is where I had to name the moment abstraction took over. A literal particle shell of the hand looked like a tech demo. The keeper direction inherited the gesture's <em>energy</em> &mdash; tension, direction of force, asymmetric spread &mdash; without requiring a readable hand at every frame. That's the honest trade: at some point the hand becomes force, and you decide if that's still your idea.</p>
+  </div>
+</section>
+
+<div class="figblock reveal">
+  <span class="figlabel">3D — interpretive model from the maquette</span>
+  <div class="fig-pair">
+    <figure>
+      <img src="images/bench/digital-3d-hero.webp" alt="3D digital interpretation of the pinch-grip hand — soft organic form, upper-left light">
+      <figcaption><strong>Hero angle.</strong> Interpretive 3D from the clay — pinch preserved, surfaces simplified. Upper-left light carried forward.</figcaption>
+    </figure>
+    <figure>
+      <img src="images/bench/digital-3d-alt.webp" alt="Alternate 3D angle — particle shell study of the hand form">
+      <figcaption><strong>Alternate.</strong> Second angle + early particle shell test — readable gesture, but starting to dissolve at the fingertips.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="figblock reveal">
+  <span class="figlabel">Particles — energy, not wallpaper</span>
+  <figure>
+    <img src="images/bench/digital-particle-study.webp" alt="Particle simulation study inheriting the gesture's tension and direction">
+    <figcaption><strong>Particle study.</strong> The hand is gone as literal form; the tension and direction of the pinch remain. This is the frame I kept — not a generic particle render, but one that still feels like a hand working.</figcaption>
+  </figure>
+</div>
+
+<div class="section-spacer"></div>
+
+<!-- 04 — MOTION -->
+<section class="essay reveal">
+  <div class="essay-head">
+    <span class="px-eyebrow">04 &middot; Motion</span>
+    <h2>Time is the next <em>material.</em></h2>
+  </div>
+  <div class="essay-body">
+    <p class="lead">A twenty-second capstone: hand, form, abstraction, return.</p>
+    <p>The <strong>motion mood board</strong> was the edit brief &mdash; assemble, dissolve, return. The cut runs the chain in order: charcoal still, clay turn, 3D orbit, particle dissolve, and back to a resolved frame. Motion doesn't add new information; it <strong>proves the translations connect</strong>. If the cut feels like five unrelated pieces, the experiment failed. If it feels like one idea changing clothes, it worked.</p>
+  </div>
+</section>
+
+<div class="figblock reveal">
+  <span class="figlabel">Capstone film — assemble / dissolve / return</span>
+  <figure>
+    <div class="px-video">
+      <iframe src="https://player.vimeo.com/video/885190039?title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="The Bench — capstone film, hand through materials"></iframe>
+    </div>
+    <figcaption><strong>Capstone.</strong> Particle assemble study edited into the through-line &mdash; form gathering, dispersing, resolving. The gesture survives as rhythm, not just silhouette.</figcaption>
+  </figure>
+</div>
+
+<div class="section-spacer"></div>
+
+<!-- 05 — AI -->
+<section class="essay reveal">
+  <div class="essay-head">
+    <span class="px-eyebrow">05 &middot; AI</span>
+    <h2>Close the loop &mdash; <em>after</em> the making.</h2>
+  </div>
+  <div class="essay-body">
+    <p class="lead">The mood boards opened the process. These frames close it.</p>
+    <p>AI showed up twice: <strong>up front</strong> as directional mood boards per material, and <strong>at the end</strong> as synthesis &mdash; generative frames that ask whether the gesture still reads after every translation. Physical &rarr; AI: I fed the charcoal keeper and the 3D hero as reference, with the same constraints the boards established &mdash; <strong>pinch-grip, upper-left light, charcoal value range, no extra objects, tendon tension visible</strong>. I let the model invent surface texture and atmosphere. I did not let it invent a new gesture.</p>
+    <p>Most rolls drifted. Fingers multiplied. The pinch opened into a wave. Thumbs grew too long. I kept four frames where the geometry held and something unexpected was worth keeping &mdash; usually in the light or the skin texture, not the structure.</p>
+    <p>This is the difference from <a href="creativelab.html">CreativeLab</a>: there, brand rules are encoded in a graph because the output has to ship. Here, the constraint is aesthetic and the output is exploratory. Same instinct &mdash; <em>hold the idea still, move one variable</em> &mdash; different stakes.</p>
+  </div>
+</section>
+
+<div class="figblock reveal">
+  <span class="figlabel">Generative explorations — held constant vs. let drift</span>
+  <div class="fig-quad">
+    <figure>
+      <img src="images/bench/ai-explore-01.webp" alt="Generative exploration 1 — pinch-grip, moody upper-left light">
+      <figcaption><strong>Explore 01.</strong> Held: pinch, light. Let drift: atmosphere.</figcaption>
+    </figure>
+    <figure>
+      <img src="images/bench/ai-explore-02.webp" alt="Generative exploration 2 — hand in warm environment">
+      <figcaption><strong>Explore 02.</strong> Held: gesture. Let drift: environment colour.</figcaption>
+    </figure>
+    <figure>
+      <img src="images/bench/ai-explore-03.webp" alt="Generative exploration 3 — close crop on pinch">
+      <figcaption><strong>Explore 03.</strong> Held: tendon tension. Let drift: crop and texture.</figcaption>
+    </figure>
+    <figure>
+      <img src="images/bench/ai-explore-04.webp" alt="Generative exploration 4 — cooler palette">
+      <figcaption><strong>Explore 04.</strong> Held: value range from charcoal. Let drift: palette temperature.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="section-spacer"></div>
+
+<!-- 06 — REFLECTION -->
+<section class="essay reveal">
+  <div class="essay-head">
+    <span class="px-eyebrow">06 &middot; Reflection</span>
+    <h2>What <em>survived.</em></h2>
+  </div>
+  <div class="essay-body">
+    <div class="pullquote">The bench keeps growing materials. The <em>gesture</em> is what has to stay.</div>
+    <div class="speculative">
+      <div class="spec-block">
+        <h3><span class="num">A</span>What stayed fixed.</h3>
+        <p>Pinch geometry, asymmetric finger spread, tendon tension, upper-left light. If those four read, the medium can do almost anything. If they don't, no amount of craft downstream saves it.</p>
+      </div>
+      <div class="spec-block">
+        <h3><span class="num">B</span>What each material gave.</h3>
+        <p>Charcoal: line and value. Clay: volume and edge. 3D: orbit and re-light. Particles: energy without literal form. AI mood boards: fast direction per material. Final generative frames: synthesis and surprise. None of them made the others obsolete.</p>
+      </div>
+      <div class="spec-block">
+        <h3><span class="num">C</span>What I'd push next.</h3>
+        <p>A physical print of the keeper generative frame next to the charcoal original &mdash; same wall, two materials. And a tighter loop: change one variable (light only, or gesture only) and re-run the full chain to see if the system is actually parametric or just a one-off story.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="figblock reveal">
+  <span class="figlabel">One gesture — five materials</span>
+  <figure>
+    <img src="images/bench/comparison-strip.jpg" alt="Comparison strip: charcoal, clay, 3D, particles, generative AI — same gesture across five materials">
+    <figcaption><strong>The full chain.</strong> Left to right: charcoal, clay, 3D, particles, generative. The idea is the same; the material is what's different.</figcaption>
+  </figure>
+</div>
+
+<div class="stats reveal">
+  <div class="stat">
+    <div class="num">1 <em>gesture</em></div>
+    <div class="lbl">Pinch-grip — the constant behind every translation.</div>
+  </div>
+  <div class="stat">
+    <div class="num">5 <em>materials</em></div>
+    <div class="lbl">Charcoal, clay, 3D, motion, generative — in that order, on purpose.</div>
+  </div>
+  <div class="stat">
+    <div class="num">2 <em>dead ends</em></div>
+    <div class="lbl">Overworked charcoal and wrong-scale clay — kept in the story on purpose.</div>
+  </div>
+</div>
+
+<div class="closing reveal">
+  <div class="closing-mark"></div>
+  <p>The bench keeps growing materials. The hand is what stays &mdash; and the mood boards are how I talk to each material before I touch it.</p>
+</div>
+
+<footer>
+  <div class="foot-col">
+    <span class="label">Contact</span>
+    <a href="mailto:mkscrivana@gmail.com" class="mono">mkscrivana@gmail.com</a>
+    <a href="https://www.linkedin.com/in/michaelscrivana89" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <div class="foot-col">
+    <span class="label">More work</span>
+    <a href="creativelab.html">CreativeLab &mdash; where this instinct ships</a>
+    <a href="bold.html">BOLD Tour &mdash; one idea, every channel</a>
+    <a href="index.html">All work</a>
+  </div>
+  <div class="foot-col right">
+    <span class="label">Colophon</span>
+    <span class="copy">Speculative &middot; 2026</span>
+    <span class="copy">DM Sans &middot; JetBrains Mono</span>
+    <span class="copy">&copy; Michael Scrivana</span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+  <button class="lb-close" id="lbClose" type="button" aria-label="Close">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous">&#8249;</button>
+  <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next">&#8250;</button>
+  <img id="lbImg" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+</script>
+<script>
+(function () {
+  var lb = document.getElementById('lightbox'), img = document.getElementById('lbImg'), cap = document.getElementById('lbCap'),
+      closeBtn = document.getElementById('lbClose'), prevBtn = document.getElementById('lbPrev'), nextBtn = document.getElementById('lbNext'),
+      items = Array.prototype.slice.call(document.querySelectorAll('figure img')), current = 0, lastFocus = null;
+  function render(i) {
+    current = (i + items.length) % items.length;
+    var el = items[current], fig = el.closest('figure'), figcap = fig ? fig.querySelector('figcaption') : null;
+    img.src = el.currentSrc || el.src; img.alt = el.alt || '';
+    if (figcap) { cap.innerHTML = figcap.innerHTML; cap.style.display = ''; } else { cap.textContent = ''; cap.style.display = 'none'; }
+  }
+  function open(i) { render(i); lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; lastFocus = document.activeElement; closeBtn.focus(); }
+  function close() { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; img.src = ''; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
+  function step(d) { render(current + d); }
+  items.forEach(function (el, i) { el.addEventListener('click', function () { open(i); }); });
+  closeBtn.addEventListener('click', close);
+  prevBtn.addEventListener('click', function (e) { e.stopPropagation(); step(-1); });
+  nextBtn.addEventListener('click', function (e) { e.stopPropagation(); step(1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') step(-1);
+    else if (e.key === 'ArrowRight') step(1);
+  });
+})();
+</script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+</body>
+</html>

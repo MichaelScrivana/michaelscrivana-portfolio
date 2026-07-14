@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Michael Scrivana — Designer, maker, building with AI</title>
 <meta name="description" content="Brand designer and maker in healthcare — campaign, digital shelf, 3D, motion, and AI. Building branded lifestyle tools with Gemini. Seven years at scale; always making.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/webclip.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://creative.michaelscrivana.com/">
+<meta property="og:title" content="Michael Scrivana — Designer, maker, building with AI">
+<meta property="og:description" content="Brand designer and maker in healthcare — building branded lifestyle tools with Gemini, plus campaign, digital shelf, 3D, motion, and fine art.">
+<meta property="og:image" content="https://creative.michaelscrivana.com/images/creativelab-graph/creativelab-app-womens50-video-full.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Michael Scrivana — Designer, maker, building with AI">
+<meta name="twitter:description" content="Brand designer and maker in healthcare — building branded lifestyle tools with Gemini, plus campaign, digital shelf, 3D, motion, and fine art.">
+<meta name="twitter:image" content="https://creative.michaelscrivana.com/images/creativelab-graph/creativelab-app-womens50-video-full.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -145,6 +156,47 @@ header.hero { padding: 84px 0 52px; border-bottom: 1px solid var(--border); }
   padding: 5px 10px; border-radius: 100px;
 }
 
+/* ── CASE-STUDY CTA ── */
+.case-cta {
+  grid-column: 1 / -1; margin-top: 22px;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding: 18px 22px; border: 1px solid var(--accent-line);
+  background: var(--accent-dim); border-radius: 14px;
+}
+.case-cta .cta-text { font-size: 14px; color: var(--ink-2); line-height: 1.5; }
+.case-cta .cta-text strong { color: var(--ink); font-weight: 600; }
+.case-cta a.cta-link {
+  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 11px; font-weight: 600; color: #fff; background: var(--accent-deep);
+  text-decoration: none; padding: 10px 16px; border-radius: 100px; white-space: nowrap;
+  transition: background .15s; margin-left: auto;
+}
+.case-cta a.cta-link:hover { background: var(--ink); }
+@media (max-width: 520px) { .case-cta a.cta-link { margin-left: 0; } }
+
+/* ── SECONDARY CASE-STUDY ROW ── */
+.case-cta-row {
+  grid-column: 1 / -1; margin-top: 8px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;
+}
+.case-cta-mini {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--border); border-radius: 14px;
+  background: var(--surface); overflow: hidden;
+  box-shadow: var(--shadow-sm); text-decoration: none; color: inherit;
+  transition: border-color .15s, transform .12s;
+}
+.case-cta-mini:hover { border-color: var(--accent-line); transform: translateY(-2px); }
+.case-cta-mini img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; }
+.case-cta-mini .mini-body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; }
+.case-cta-mini .mini-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 6px; line-height: 1.35; }
+.case-cta-mini .mini-desc { font-size: 13px; color: var(--ink-3); line-height: 1.5; flex: 1; }
+.case-cta-mini .mini-link {
+  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 10px; font-weight: 600; color: var(--accent-deep); margin-top: 12px;
+}
+.case-cta-mini:hover .mini-link { color: var(--ink); }
+
 /* ── IMAGE GALLERY ── */
 .shots { grid-column: 1 / -1; margin: 2px 0 6px; }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -263,13 +315,14 @@ figure img { cursor: zoom-in; }
   <div class="wrap">
     <a class="brand" href="/"><img class="logo" src="images/ms-logo-m.png" alt="" width="42" height="22"><span class="brand-name">Michael Scrivana</span></a>
     <div class="links">
+      <a class="case-link" href="#bench">Bench</a>
       <a class="case-link" href="#ai">AI</a>
-      <a class="case-link" href="#campaign">Campaign</a>
-      <a class="case-link" href="#commerce">Commerce</a>
+      <a class="case-link" href="#campaign">Brand</a>
       <a class="case-link" href="#poster">Poster</a>
       <a class="case-link" href="#motion">Motion</a>
       <a class="case-link" href="#experience">Live</a>
       <a class="case-link" href="#fineart">Art</a>
+      <a href="about.html">Bio</a>
       <a class="resume" href="resume.html">Résumé</a>
       <a class="contact" href="mailto:mkscrivana@gmail.com">Contact</a>
     </div>
@@ -278,22 +331,89 @@ figure img { cursor: zoom-in; }
 
 <header class="hero">
   <div class="wrap">
-    <div class="kicker mono"><span class="dot"></span>&nbsp;Michael Scrivana</div>
     <h1>
       <span class="hero-line">Designer and maker.</span>
       <span class="hero-line hero-line--soft">Building with AI.</span>
     </h1>
-    <p class="lede">For the last seven years I've been a brand designer, building brands across healthcare. But the making started at the easel and never stopped — drawing, painting, sculpture, digital art, 3D, motion, and lately AI. I build tools, wire pipelines, and make in my free time whenever I can — <span class="lede-tools">I love to learn and experiment.</span> What follows is a tour across those disciplines.</p>
-    <figure class="hero-feature">
-      <img src="images/creativelab-canvas-oad-kids.jpg" alt="Node-based React Flow canvas — brand data in, Gemini generation out">
-      <figcaption><strong>The system, not a prompt box.</strong> A node-based tool I built in React — brand data flows in, Gemini generates channel-ready lifestyle imagery out. Pack shots, colour systems, typography rules, and channel specs wired as structured data; designers compose the pipeline and get on-brand frames in minutes.</figcaption>
-    </figure>
+    <p class="lede">For the last seven years I've been a brand designer, building brands across healthcare. But the making started at the easel and never stopped — drawing, painting, sculpture, digital art, 3D, motion, and lately AI. I build tools, wire pipelines, and make in my free time whenever I can — <span class="lede-tools">I love to learn and experiment.</span></p>
   </div>
 </header>
 
 <section class="thesis">
   <div class="wrap">
     <p>I make across every medium I can get my hands on — and let <span class="hl">each new tool</span> reshape how I make.</p>
+  </div>
+</section>
+
+<!-- 00 — THE BENCH (speculative) -->
+<section class="case" id="bench">
+  <div class="wrap">
+    <div class="case-head">
+      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>00</div>
+      <div>
+        <div class="case-title">The Bench — speculative</div>
+        <div class="case-sub">One gesture · every material · process forward</div>
+      </div>
+    </div>
+    <div class="case-body">
+
+      <div class="block full">
+        <div class="label mono">The experiment</div>
+        <p>I fixed one idea &mdash; my hand in a <strong>pinch-grip</strong> &mdash; and ran it through every medium on my bench. Up front, <strong>AI mood boards</strong> set direction for fine art, sculpture, color, and motion. Then charcoal, clay, 3D, and film do the making. Not a campaign &mdash; a test of <em>what survives</em> when the material changes.</p>
+      </div>
+      <div class="jd-tag">
+        <span>speculative</span><span>AI mood boards</span><span>charcoal &rarr; clay &rarr; 3D</span><span>motion</span><span>process</span>
+      </div>
+
+      <div class="shots">
+        <figure class="wide">
+          <img src="images/bench/mood-boards-hero.jpg" alt="AI mood boards — fine art, sculpture, color, and motion">
+          <figcaption><strong>Four mood boards up front.</strong> Directional AI passes per material before the physical work begins &mdash; value, volume, palette, motion grammar.</figcaption>
+        </figure>
+        <figure class="wide row-gap">
+          <img src="images/bench/bench-flat-lay.jpg" alt="The Bench flat-lay — charcoal, clay, 3D, particles, and generative frame in one row">
+          <figcaption><strong>Five materials, one gesture.</strong> Charcoal study, clay maquette, 3D interpretation, particle study, generative exploration &mdash; the full translation chain, left to right.</figcaption>
+        </figure>
+        <figure class="wide row-gap">
+          <img src="images/bench/comparison-strip.jpg" alt="Same pinch-grip hand across charcoal, clay, 3D, particles, and AI">
+          <figcaption><strong>What had to stay fixed:</strong> pinch geometry, tendon tension, asymmetric spread, upper-left light. Everything else was allowed to change.</figcaption>
+        </figure>
+
+        <div class="case-cta">
+          <div class="cta-text"><strong>The full case study.</strong> The spark, the dead ends, the medium transitions, and what survived the translation.</div>
+          <a class="cta-link" href="bench.html">Read The Bench &rarr;</a>
+        </div>
+
+        <div class="lead-label">Three depths — thinking, shipping, scale</div>
+        <p class="gallery-cap gallery-lead">For a reviewer who wants the full arc: start with the speculative process piece, then see where that instinct ships in production, then see it hold across years and channels.</p>
+        <div class="case-cta-row">
+          <a class="case-cta-mini" href="bench.html">
+            <img src="images/bench/charcoal-hand-v1.webp" alt="The Bench — charcoal hand study">
+            <div class="mini-body">
+              <div class="mini-title">The Bench &middot; speculative</div>
+              <div class="mini-desc">One gesture through every material &mdash; how I think and make, with the mess visible.</div>
+              <span class="mini-link">Read case study &rarr;</span>
+            </div>
+          </a>
+          <a class="case-cta-mini" href="creativelab.html">
+            <img src="images/creativelab-graph/creativelab-app-womens50-video-full.jpg" alt="CreativeLab node-based canvas">
+            <div class="mini-body">
+              <div class="mini-title">CreativeLab &middot; ships</div>
+              <div class="mini-desc">Where the same instinct becomes a tool &mdash; brand data in, channel-ready imagery out.</div>
+              <span class="mini-link">Read case study &rarr;</span>
+            </div>
+          </a>
+          <a class="case-cta-mini" href="bold.html">
+            <img src="images/BOLD-HERO2.png" alt="BOLD Tour key visual">
+            <div class="mini-body">
+              <div class="mini-title">BOLD Tour &middot; scale</div>
+              <div class="mini-desc">One idea held across three years, every medium, and a room full of marketers.</div>
+              <span class="mini-link">Read case study &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -324,13 +444,20 @@ figure img { cursor: zoom-in; }
       <div class="shots">
         <div class="lead-label">Act one — the tool I built</div>
         <figure class="wide">
-          <img src="images/creativelab-canvas-oad-kids.jpg" alt="Node-based React Flow canvas — brand data in, Gemini generation out">
-          <figcaption><strong>The system, not a prompt box.</strong> Brand data — pack reference, colours, rules, channel specs — flows through a composable graph. Gemini handles generation at the centre; each node is a designed step: reference in, brand-rules check, generate, channel-fit, compliance, output. The user wires the graph; the graph runs.</figcaption>
+          <img src="images/creativelab-graph/creativelab-canvas-womens50-video-graph.jpg" alt="Node-based React Flow canvas — pack reference in, Gemini iterate out, Veo video at the end">
+          <figcaption><strong>The system, not a prompt box.</strong> Brand data — pack reference, colours, rules, channel specs — flows through a composable graph. Gemini generates and iterates the still; a Video node wires the keeper frame to Veo. Reference in, generate, iterate, output, animate — the user wires the graph; the graph runs.</figcaption>
         </figure>
-        <figure class="wide">
-          <img src="images/creativelab-oad-kids-hero.jpg" alt="Channel-ready One A Day Kids lifestyle hero generated from brand data with Gemini">
-          <figcaption><strong>Branded lifestyle, channel-ready</strong> — a One A Day Kids hero built from the brand's own pack and colour system. Nothing photographed; Gemini generated the scene from structured brand data in minutes.</figcaption>
+        <figure class="wide row-gap">
+          <div class="video">
+            <iframe src="https://player.vimeo.com/video/1204031227?title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="One A Day Women&rsquo;s 50+ Multi Gummy — Veo animation from Gemini-generated still"></iframe>
+          </div>
+          <figcaption><strong>Still to motion.</strong> Women&rsquo;s 50+ Multi Gummy — pack reference in, Gemini iterates the hero still, Veo 3.1 animates it out. Nothing photographed; the full chain runs inside the tool in minutes.</figcaption>
         </figure>
+
+        <div class="case-cta">
+          <div class="cta-text"><strong>How I built it — the full case study.</strong> The problem, the dead ends, the architecture decision, and the impact.</div>
+          <a class="cta-link" href="creativelab.html">Read the case study &rarr;</a>
+        </div>
 
         <div class="lead-label">Act two — client output · NACDS 2026 booth panels</div>
         <p class="gallery-cap gallery-lead">The same pipeline, at trade-show scale — lifestyle panels and close-up heroes generated through CreativeLab for One A Day&rsquo;s NACDS booth. Pack reference, brand colours, and segment briefs in; booth-ready environmental graphics out. Every frame below is Gemini output from structured brand data, not photography.</p>
@@ -358,7 +485,7 @@ figure img { cursor: zoom-in; }
           <figure><img src="images/Product-MJ007.webp" alt="Generative product render"></figure>
           <figure><img src="images/Product-MJ016.webp" alt="Generative product render"></figure>
         </div>
-        <p class="gallery-cap"><strong>Product visualization</strong> — generative renders that jump-start ideation: colour, form, and texture explored fast.</p>
+        <p class="gallery-cap"><strong>Product visualization</strong> — where I make the early calls on colour, form, and texture, fast. The tool accelerates the judgment; the judgment stays mine.</p>
 
         <div class="lead-label">Storyboarding — narrative into image</div>
         <div class="gallery-strip">
@@ -386,156 +513,106 @@ figure img { cursor: zoom-in; }
           <figure><img src="images/Lucid-MJ003.webp" alt="Generative lucid science visual"></figure>
           <figure><img src="images/Lucid-MJ008.webp" alt="Generative lucid science visual"></figure>
         </div>
-        <p class="gallery-cap"><strong>Science visuals</strong> — micro-cellular and abstract imagery from a decade designing in healthcare; the kind of generative work few portfolios can show.</p>
+        <p class="gallery-cap"><strong>Science visuals</strong> — micro-cellular and abstract imagery from a decade making sense of healthcare science. Using the tools to <em>see</em>, not just to generate.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 02 — CAMPAIGN AT SCALE -->
+<!-- 02 — BRAND AT SCALE -->
 <section class="case" id="campaign">
   <div class="wrap">
     <div class="case-head">
       <div class="case-num"><span class="tick" style="background:var(--accent)"></span>02</div>
       <div>
-        <div class="case-title">Brand &amp; campaign</div>
-        <div class="case-sub">Integrated · brief to launch · at scale</div>
+        <div class="case-title">Brand at scale</div>
+        <div class="case-sub">Brief to launch · identity · shelf · web</div>
       </div>
     </div>
     <div class="case-body">
 
       <div class="block">
         <div class="label mono">The work</div>
-        <p>I lead creative <strong>from the blank brief to launch</strong> — concepting the idea, art-directing the look, and driving it through to finished, channel-ready execution. Recent work includes the new One A Day brand identity (hundreds of KVs and photoreal renders) and MiraLAX line extensions — one idea carried across pack, film, social, retail, and web.</p>
+        <p>I lead creative <strong>from the blank brief to launch</strong> — concepting the idea, art-directing the look, and driving it through to channel-ready execution across pack, film, social, retail, and web. Side by side with marketers, insights, animators, ecomm, copywriters, and producers — I hold the through-line so one idea stays whole as it fans out.</p>
       </div>
       <div class="block">
         <div class="label mono">How I work</div>
-        <p>Side by side with marketers, insights, animators, ecomm, copywriters, and producers — I hold the through-line so one idea stays whole as it fans out across channels, markets, and a hundred deliverables.</p>
+        <p>One visual system, every channel it needs to live on. The flagship work below is the new One A Day identity; the rest fans out across the digital shelf, a full brand launch, and line extensions — each with its own case study.</p>
       </div>
       <div class="jd-tag">
-        <span>brief → launch</span><span>integrated campaign</span><span>cross-functional</span><span>concept + execution</span>
+        <span>brief → launch</span><span>integrated campaign</span><span>digital shelf</span><span>cross-functional</span>
       </div>
 
       <div class="shots">
+        <div class="lead-label">Act one — One A Day · new brand identity</div>
         <figure class="wide">
           <div class="video">
             <iframe src="https://player.vimeo.com/video/1203666719?h=95c98f0ba1&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="One A Day Women&rsquo;s Multi Gummy brand animation"></iframe>
           </div>
-          <figcaption><strong>One A Day — new brand identity.</strong> Women&rsquo;s Multi Gummy launch animation — part of the &ldquo;The ONE for you.&rdquo; system I led across the full portfolio. Hundreds of photoreal stills and motion assets for digital, print, and retail.</figcaption>
+          <figcaption><strong>&ldquo;The ONE for you.&rdquo;</strong> Women&rsquo;s Multi Gummy launch animation — part of the identity system I led across the full portfolio.</figcaption>
         </figure>
 
         <figure class="wide row-gap">
           <img src="images/oad-new/oad-kv-lineup-orange.webp" alt="One A Day new brand identity — portfolio lineup key visual, The ONE for you">
-          <figcaption><strong>Portfolio lineup.</strong> Key visual system across Women&rsquo;s, Men&rsquo;s, Kids, Prenatal, and 50+ lines — one identity, every segment.</figcaption>
+          <figcaption><strong>Portfolio lineup.</strong> One identity across Women&rsquo;s, Men&rsquo;s, Kids, Prenatal, and 50+ — each segment, its own colour story inside the same system.</figcaption>
         </figure>
 
-        <div class="lead-label">Wave 1 + 2 — key visuals by segment</div>
-        <div class="pair">
+        <div class="pair row-gap">
           <figure>
             <img src="images/oad-new/oad-kv-mens-blue.webp" alt="One A Day Men&rsquo;s Multi key visual — blue brand field">
-            <figcaption><strong>Men&rsquo;s.</strong> Gummy and tablet renders on the new blue brand field.</figcaption>
+            <figcaption><strong>Men&rsquo;s.</strong> Gummy and tablet on the new blue brand field.</figcaption>
           </figure>
           <figure>
             <img src="images/oad-new/oad-kv-kids-cyan.webp" alt="One A Day Kids Multi key visual — cyan brand field">
             <figcaption><strong>Kids.</strong> Multi, Iron, and Probiotic gummies — three SKUs, one system.</figcaption>
           </figure>
         </div>
-        <div class="pair row-gap">
-          <figure>
-            <img src="images/oad-new/oad-kv-womens-lineup.webp" alt="One A Day Women&rsquo;s and Prenatal key visual">
-            <figcaption><strong>Women&rsquo;s &amp; Prenatal.</strong> Prenatal gummy, Women&rsquo;s gummy, and Women&rsquo;s 50+ tablet.</figcaption>
-          </figure>
-          <figure>
-            <img src="images/oad-new/oad-kv-gummy-tablet-lineup.webp" alt="One A Day gummy and tablet portfolio key visual">
-            <figcaption><strong>Gummy + tablet.</strong> The full format range on one orange brand field.</figcaption>
-          </figure>
+
+        <div class="case-cta">
+          <div class="cta-text"><strong>The full One A Day launch — the case study.</strong> The system, the segment matrix, motion, and product renders across every channel.</div>
+          <a class="cta-link" href="oad-new-identity.html">Read the case study &rarr;</a>
         </div>
 
-        <div class="lead-label">Photoreal product renders — digital &amp; print</div>
-        <div class="trio">
-          <figure><img src="images/oad-new/oad-product-teen-gummy.webp" alt="One A Day Teen Multi Gummy product render"><figcaption>Teen Multi Gummy</figcaption></figure>
-          <figure><img src="images/oad-new/oad-product-mens-50-tablet.webp" alt="One A Day Men&rsquo;s 50+ Multi tablet render"><figcaption>Men&rsquo;s 50+ Multi</figcaption></figure>
-          <figure><img src="images/oad-new/oad-product-kids-multi.webp" alt="One A Day Kids Multi gummy render"><figcaption>Kids Multi</figcaption></figure>
+        <div class="lead-label lead-label--break" id="commerce" style="scroll-margin-top:72px">Act two — more brand work</div>
+        <span id="iberogast" style="display:block;scroll-margin-top:72px;height:0" aria-hidden="true"></span>
+        <p class="gallery-cap gallery-lead">Same discipline, different briefs — the digital shelf, a market entry, and a line extension. Each links to a full project write-up.</p>
+
+        <div class="case-cta-row">
+          <a class="case-cta-mini" href="ecommerce1.html">
+            <img src="images/HatchProductshot-1.webp" alt="One A Day wellness line — digital shelf">
+            <div class="mini-body">
+              <div class="mini-title">One A Day &middot; digital shelf</div>
+              <div class="mini-desc">Wellness line product imagery, Amazon A+ modules, and ingredient-led BTF content — hero image to add to cart.</div>
+              <span class="mini-link">View project &rarr;</span>
+            </div>
+          </a>
+          <a class="case-cta-mini" href="iberogast-launch.html">
+            <img src="images/IB-web-overview.webp" alt="Iberogast launch site">
+            <div class="mini-body">
+              <div class="mini-title">Iberogast &middot; U.S. launch</div>
+              <div class="mini-desc">End-to-end brand entry — responsive site, mobile, retail merchandising, and mode-of-action motion.</div>
+              <span class="mini-link">View project &rarr;</span>
+            </div>
+          </a>
+          <a class="case-cta-mini" href="miralax.html">
+            <img src="images/MiraFAST-hero.png" alt="MiraFAST soft chews pack with mixed berries on a purple brand field">
+            <div class="mini-body">
+              <div class="mini-title">MiraLAX &middot; line extensions</div>
+              <div class="mini-desc">One modular system, two launches — ~$79M+ combined retail sales, with MiraFAST designed in a three-week sprint.</div>
+              <span class="mini-link">View project &rarr;</span>
+            </div>
+          </a>
         </div>
-
-        <figure class="wide row-gap">
-          <div class="video">
-            <iframe src="https://player.vimeo.com/video/1203666606?title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="One A Day Kids character animation"></iframe>
-          </div>
-          <figcaption><strong>Kids — character animation.</strong> Character motion for the new Kids line — same cyan brand field, same &ldquo;The ONE for you.&rdquo; system, built for digital and social.</figcaption>
-        </figure>
-
-        <p class="gallery-cap"><strong>Hundreds of renders</strong> produced for Amazon, retailer platforms, brand .com, social, and print — each SKU, format, and segment with its own color story inside one identity system.</p>
-
-        <figure class="wide row-gap">
-          <img src="images/oad-new/oad-wave-overview.webp" alt="One A Day Wave 1 and 2 stills overview — full key visual matrix">
-          <figcaption><strong>Wave 1 + 2 stills.</strong> A slice of the full KV matrix — every segment, every format, every brand field.</figcaption>
-        </figure>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 03 — ECOMMERCE & DIGITAL SHELF -->
-<section class="case" id="commerce">
-  <div class="wrap">
-    <div class="case-head">
-      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>03</div>
-      <div>
-        <div class="case-title">Ecommerce &amp; the digital shelf</div>
-        <div class="case-sub">Amazon &amp; retailer · web · mobile · in-store</div>
-      </div>
-    </div>
-    <div class="case-body">
-
-      <div class="block full">
-        <div class="label mono">The work</div>
-        <p>Where the brand actually meets the shopper — the digital shelf and the store aisle. I design the <strong>full path to purchase</strong>: product imagery, Amazon A+ and retailer pages, responsive brand sites, and in-store merchandising, all holding one visual system from hero image to "add to cart."</p>
-      </div>
-      <div class="jd-tag">
-        <span>ecommerce</span><span>digital shelf</span><span>responsive web</span><span>retail / in-store</span>
-      </div>
-
-      <div class="shots">
-        <div class="lead-label">One A Day — product &amp; the digital shelf</div>
-        <figure class="wide">
-          <img src="images/HatchProductshot-1.webp" alt="One A Day wellness line product photography">
-          <figcaption><strong>The wellness line, shot for the shelf.</strong> Product photography and renders that carry a portfolio across Amazon, retailer platforms, and brand .coms — one visual system, every SKU.</figcaption>
-        </figure>
-        <div class="pair row-gap">
-          <figure><img src="images/BTFStress.webp" alt="One A Day Stress Less — Ashwagandha, Passionflower and Valerian"><figcaption><strong>Stress Less</strong> — ingredient-led BTF module</figcaption></figure>
-          <figure><img src="images/BTFCognitive.webp" alt="One A Day Cognitive Support — Bacopa, Rhodiola and Holy Basil"><figcaption><strong>Cognitive Support</strong> — ingredient-led BTF module</figcaption></figure>
-        </div>
-        <div class="pair row-gap">
-          <figure><img src="images/BTFFocus.webp" alt="One A Day Active Focus — Ginseng, L-Theanine and Caffeine"><figcaption><strong>Active Focus</strong> — ingredient-led BTF module</figcaption></figure>
-          <figure><img src="images/BTFSleep.webp" alt="One A Day Sleep Well — Melatonin and Passionflower"><figcaption><strong>Sleep Well</strong> — ingredient-led BTF module</figcaption></figure>
-        </div>
-
-        <div class="lead-label lead-label--break" id="iberogast" style="scroll-margin-top:72px">Iberogast — web, mobile &amp; retail</div>
-        <figure class="wide">
-          <img src="images/IB-web-overview.webp" alt="Iberogast website — Gut issues? Not an issue.">
-          <figcaption><strong>Iberogast launch site.</strong> "Gut issues? Not an issue." — a full responsive brand site, concept through build-ready design.</figcaption>
-        </figure>
-        <div class="pair row-gap">
-          <figure><img src="images/Mobile-mock1.webp" alt="Iberogast responsive mobile screens"><figcaption><strong>Mobile experience</strong> — the whole journey, designed for the phone first.</figcaption></figure>
-          <figure><img src="images/IB-VizMerch-1.webp" alt="Iberogast retail merchandising display"><figcaption><strong>Retail merchandising</strong> — the same identity, built for the store.</figcaption></figure>
-        </div>
-        <figure class="wide row-gap">
-          <div class="video">
-            <iframe src="https://player.vimeo.com/video/885171321?h=57569bab95&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Iberogast mode of action animation concept"></iframe>
-          </div>
-          <figcaption><strong>Mode of action animation.</strong> Concept animation translating Iberogast&rsquo;s clinical story into motion for digital channels.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 04 — POSTER & ILLUSTRATION -->
+<!-- 03 — POSTER & ILLUSTRATION -->
 <section class="case" id="poster">
   <div class="wrap">
     <div class="case-head">
-      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>04</div>
+      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>03</div>
       <div>
         <div class="case-title">Poster &amp; illustration</div>
         <div class="case-sub">Type &amp; composition · digital illustration · brand</div>
@@ -586,7 +663,7 @@ figure img { cursor: zoom-in; }
 <section class="case" id="motion">
   <div class="wrap">
     <div class="case-head">
-      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>05</div>
+      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>04</div>
       <div>
         <div class="case-title">3D &amp; motion</div>
         <div class="case-sub">Form · light · things in motion</div>
@@ -596,7 +673,7 @@ figure img { cursor: zoom-in; }
 
       <div class="block full">
         <div class="label mono">The thread</div>
-        <p>I design things that move and things with dimension — from these explorations to launch films, stage-opener animation, and 700+ photoreal product renders for the digital shelf. Thinking in <strong>motion and form</strong>, not just static frames, is half of how a new technology gets shown to people. <em>(The BOLD Breakthrough Tour below carries this into a full campaign.)</em></p>
+        <p>I design things that move and things with dimension — from these explorations to launch films, stage-opener animation, and photoreal product renders built from one system for the digital shelf. Thinking in <strong>motion and form</strong>, not just static frames, is half of how a new technology gets shown to people. <em>(The BOLD Breakthrough Tour below carries this into a full campaign.)</em></p>
       </div>
       <div class="jd-tag">
         <span>3D rendering</span><span>motion design</span><span>animation</span><span>generative media</span>
@@ -605,8 +682,13 @@ figure img { cursor: zoom-in; }
       <div class="shots">
         <div class="lead-label">3D — particles &amp; form</div>
         <div class="trio">
-          <figure><img src="images/particle017-main.webp" alt="3D particle render — physics, form, light"></figure>
+          <figure><img src="images/particle005-thumb.webp" alt="3D particle render"></figure>
           <figure><img src="images/particle006-thumb.webp" alt="3D particle render"></figure>
+          <figure><img src="images/particle011-thumb.webp" alt="3D particle render"></figure>
+        </div>
+        <div class="trio row-gap">
+          <figure><img src="images/RS_ATOM15-02-thumb.png" alt="3D particle render — RS Atom"></figure>
+          <figure><img src="images/particle025-thumb.webp" alt="3D particle render"></figure>
           <figure><img src="images/particle026-thumb.webp" alt="3D particle render"></figure>
         </div>
         <figcaption style="margin-top:12px;"><strong>3D — particles, physics, texture, light.</strong> Renders made to chase a feeling, a frame at a time.</figcaption>
@@ -629,7 +711,7 @@ figure img { cursor: zoom-in; }
 <section class="case" id="experience">
   <div class="wrap">
     <div class="case-head">
-      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>06</div>
+      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>05</div>
       <div>
         <div class="case-title">Experiences you can walk through</div>
         <div class="case-sub">The BOLD Breakthrough Tour · one idea, every medium</div>
@@ -645,6 +727,11 @@ figure img { cursor: zoom-in; }
         <span>integrated campaign</span><span>motion + 3D</span><span>live production</span><span>spatial / experiential</span>
       </div>
 
+      <div class="case-cta">
+        <div class="cta-text"><strong>How one idea held for three years — the full case study.</strong> The brief, the system, and how it stayed coherent across every medium.</div>
+        <a class="cta-link" href="bold.html">Read the case study &rarr;</a>
+      </div>
+
       <div class="shots">
         <p class="gallery-cap gallery-lead"><strong>Three years of events below.</strong> What follows is work from across the full run — virtual, hybrid, and in-person — so you&rsquo;ll see different logo marks and identity treatments year to year. Same design system, three annual events.</p>
 
@@ -655,9 +742,6 @@ figure img { cursor: zoom-in; }
         </figure>
         <div class="video row-gap">
           <iframe src="https://player.vimeo.com/video/758432920?h=5c5996087f&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="BOLD Ambition Tour motion 2"></iframe>
-        </div>
-        <div class="video row-gap">
-          <iframe src="https://player.vimeo.com/video/758433013?h=9f75855fc4&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;loop=1&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="BOLD Ambition Tour motion 1"></iframe>
         </div>
         <p class="gallery-cap"><strong>Stage films &amp; animated identity</strong> — the motion that ran the room, built from the Cinema 4D storyboards below.</p>
 
@@ -692,7 +776,7 @@ figure img { cursor: zoom-in; }
 <section class="case" id="fineart">
   <div class="wrap">
     <div class="case-head">
-      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>07</div>
+      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>06</div>
       <div>
         <div class="case-title">Fine art — where it started</div>
         <div class="case-sub">Drawing · oil painting · sculpture, from life</div>
@@ -1025,11 +1109,19 @@ figure img { cursor: zoom-in; }
   var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
   if (reduce || !fine) return;   // touch / reduced-motion: leave as click-to-play
   document.querySelectorAll('.video').forEach(function (box) {
-    var iframe = box.querySelector('iframe'); if (!iframe) return;
-    var player = new Vimeo.Player(iframe);
-    player.setVolume(0);
-    box.addEventListener('mouseenter', function () { player.play().catch(function () {}); });
-    box.addEventListener('mouseleave', function () { player.pause().catch(function () {}); });
+    var iframe = box.querySelector('iframe');
+    if (iframe) {
+      var player = new Vimeo.Player(iframe);
+      player.setVolume(0);
+      box.addEventListener('mouseenter', function () { player.play().catch(function () {}); });
+      box.addEventListener('mouseleave', function () { player.pause().catch(function () {}); });
+      return;
+    }
+    var video = box.querySelector('video');
+    if (!video) return;
+    video.muted = true;
+    box.addEventListener('mouseenter', function () { video.play().catch(function () {}); });
+    box.addEventListener('mouseleave', function () { video.pause(); });
   });
 })();
 </script>
