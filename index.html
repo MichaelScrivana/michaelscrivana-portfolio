@@ -286,16 +286,6 @@ figure img { cursor: zoom-in; }
 .lightbox .lb-next { right: 18px; }
 @media (max-width: 600px) { .lightbox .lb-prev { left: 8px; } .lightbox .lb-next { right: 8px; } .lightbox .lb-nav { width: 42px; height: 42px; } }
 
-/* ── PLAY / INKJUMP RUNNER ── */
-.play { padding: 60px 0 76px; border-top: 1px solid var(--border); }
-.play-head { text-align: left; margin-bottom: 24px; }
-.play-head .eyebrow { color: var(--accent); display: block; margin-bottom: 12px; }
-.play-head h2 { font-size: clamp(22px, 3.5vw, 30px); font-weight: 700; letter-spacing: var(--tight); margin-bottom: 10px; }
-.play-head p { font-size: 14px; color: var(--ink-3); }
-.play-head kbd { font-family: var(--mono); font-size: 11px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; color: var(--ink-2); }
-.play-frame { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
-.play-frame canvas { display: block; width: 100%; height: auto; cursor: pointer; touch-action: manipulation; }
-
 /* ── SCROLL REVEAL (ink) ── */
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1); will-change: opacity, transform; }
 .reveal.in { opacity: 1; transform: none; }
@@ -315,7 +305,6 @@ figure img { cursor: zoom-in; }
   <div class="wrap">
     <a class="brand" href="/"><img class="logo" src="images/ms-logo-m.png" alt="" width="42" height="22"><span class="brand-name">Michael Scrivana</span></a>
     <div class="links">
-      <a class="case-link" href="#bench">Bench</a>
       <a class="case-link" href="#ai">AI</a>
       <a class="case-link" href="#campaign">Brand</a>
       <a class="case-link" href="#poster">Poster</a>
@@ -342,78 +331,6 @@ figure img { cursor: zoom-in; }
 <section class="thesis">
   <div class="wrap">
     <p>I make across every medium I can get my hands on — and let <span class="hl">each new tool</span> reshape how I make.</p>
-  </div>
-</section>
-
-<!-- 00 — THE BENCH (speculative) -->
-<section class="case" id="bench">
-  <div class="wrap">
-    <div class="case-head">
-      <div class="case-num"><span class="tick" style="background:var(--accent)"></span>00</div>
-      <div>
-        <div class="case-title">The Bench — speculative</div>
-        <div class="case-sub">One gesture · every material · process forward</div>
-      </div>
-    </div>
-    <div class="case-body">
-
-      <div class="block full">
-        <div class="label mono">The experiment</div>
-        <p>I fixed one idea &mdash; my hand in a <strong>pinch-grip</strong> &mdash; and ran it through every medium on my bench. Up front, <strong>AI mood boards</strong> set direction for fine art, sculpture, color, and motion. Then charcoal, clay, 3D, and film do the making. Not a campaign &mdash; a test of <em>what survives</em> when the material changes.</p>
-      </div>
-      <div class="jd-tag">
-        <span>speculative</span><span>AI mood boards</span><span>charcoal &rarr; clay &rarr; 3D</span><span>motion</span><span>process</span>
-      </div>
-
-      <div class="shots">
-        <figure class="wide">
-          <img src="images/bench/mood-boards-hero.jpg" alt="AI mood boards — fine art, sculpture, color, and motion">
-          <figcaption><strong>Four mood boards up front.</strong> Directional AI passes per material before the physical work begins &mdash; value, volume, palette, motion grammar.</figcaption>
-        </figure>
-        <figure class="wide row-gap">
-          <img src="images/bench/bench-flat-lay.jpg" alt="The Bench flat-lay — charcoal, clay, 3D, particles, and generative frame in one row">
-          <figcaption><strong>Five materials, one gesture.</strong> Charcoal study, clay maquette, 3D interpretation, particle study, generative exploration &mdash; the full translation chain, left to right.</figcaption>
-        </figure>
-        <figure class="wide row-gap">
-          <img src="images/bench/comparison-strip.jpg" alt="Same pinch-grip hand across charcoal, clay, 3D, particles, and AI">
-          <figcaption><strong>What had to stay fixed:</strong> pinch geometry, tendon tension, asymmetric spread, upper-left light. Everything else was allowed to change.</figcaption>
-        </figure>
-
-        <div class="case-cta">
-          <div class="cta-text"><strong>The full case study.</strong> The spark, the dead ends, the medium transitions, and what survived the translation.</div>
-          <a class="cta-link" href="bench.html">Read The Bench &rarr;</a>
-        </div>
-
-        <div class="lead-label">Three depths — thinking, shipping, scale</div>
-        <p class="gallery-cap gallery-lead">For a reviewer who wants the full arc: start with the speculative process piece, then see where that instinct ships in production, then see it hold across years and channels.</p>
-        <div class="case-cta-row">
-          <a class="case-cta-mini" href="bench.html">
-            <img src="images/bench/charcoal-hand-v1.webp" alt="The Bench — charcoal hand study">
-            <div class="mini-body">
-              <div class="mini-title">The Bench &middot; speculative</div>
-              <div class="mini-desc">One gesture through every material &mdash; how I think and make, with the mess visible.</div>
-              <span class="mini-link">Read case study &rarr;</span>
-            </div>
-          </a>
-          <a class="case-cta-mini" href="creativelab.html">
-            <img src="images/creativelab-graph/creativelab-app-womens50-video-full.jpg" alt="CreativeLab node-based canvas">
-            <div class="mini-body">
-              <div class="mini-title">CreativeLab &middot; ships</div>
-              <div class="mini-desc">Where the same instinct becomes a tool &mdash; brand data in, channel-ready imagery out.</div>
-              <span class="mini-link">Read case study &rarr;</span>
-            </div>
-          </a>
-          <a class="case-cta-mini" href="bold.html">
-            <img src="images/BOLD-HERO2.png" alt="BOLD Tour key visual">
-            <div class="mini-body">
-              <div class="mini-title">BOLD Tour &middot; scale</div>
-              <div class="mini-desc">One idea held across three years, every medium, and a room full of marketers.</div>
-              <span class="mini-link">Read case study &rarr;</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -817,193 +734,6 @@ figure img { cursor: zoom-in; }
   </div>
 </section>
 
-<!-- PLAY — INKJUMP RUNNER -->
-<section class="play" id="play">
-  <div class="wrap">
-    <div class="play-head">
-      <span class="mono eyebrow">P.S. — you scrolled the whole way</span>
-      <h2>Have a play.</h2>
-      <p><strong>Inkjump</strong> — a little runner I built by hand. <kbd>Space</kbd> / <kbd>&uarr;</kbd> / tap to jump.</p>
-    </div>
-    <div class="play-frame">
-      <canvas id="runner" aria-label="Inkjump — a paintbrush runner game"></canvas>
-    </div>
-  </div>
-</section>
-
-<script>
-(function () {
-  var canvas = document.getElementById('runner'); if (!canvas) return;
-  var ctx = canvas.getContext('2d');
-  var W = 920, H = 240, dpr = Math.min(window.devicePixelRatio || 1, 2);
-  canvas.width = W * dpr; canvas.height = H * dpr;
-  canvas.style.aspectRatio = W + ' / ' + H;
-  ctx.scale(dpr, dpr);
-
-  var css = getComputedStyle(document.documentElement);
-  var INK = (css.getPropertyValue('--ink').trim() || '#0a0d12');
-  var INK2 = (css.getPropertyValue('--ink-2').trim() || '#45474f');
-  var ACCENT = (css.getPropertyValue('--accent').trim() || '#3a3a40');
-
-  var groundLine = H - 34, GRAV = 0.7;
-  var player, obstacles, trail, speed, score, hi, state, spawnIn, t, frame = 0;
-  hi = parseInt(localStorage.getItem('inkjump-hi') || '0', 10) || 0;
-
-  function reset() {
-    player = { x: 78, y: groundLine, vy: 0, w: 16, h: 44, rot: 0, onGround: true };
-    obstacles = []; trail = []; speed = 6; score = 0; spawnIn = 55; t = 0; state = 'ready';
-  }
-  reset();
-
-  function jump() {
-    if (state === 'over') { reset(); state = 'running'; return; }
-    if (state === 'ready') state = 'running';
-    if (player.onGround) { player.vy = -12; player.onGround = false; }
-  }
-
-  function spawn() {
-    if (Math.random() < 0.25) {
-      var ch = 28 + Math.random() * 28;
-      obstacles.push({ x: W + 10, w: 24, h: ch, type: 'cactus', arms: Math.random() < 0.5 ? 1 : 2 });
-      return;
-    }
-    var h = 20 + Math.random() * 34, w = 14 + Math.random() * 12;
-    obstacles.push({ x: W + 10, w: w, h: h, type: 'block' });
-    if (Math.random() < 0.22) obstacles.push({ x: W + 10 + w + 8, w: 13, h: 16 + Math.random() * 26, type: 'block' });
-  }
-
-  function rr(x, y, w, h, r) {
-    ctx.beginPath();
-    ctx.moveTo(x + r, y);
-    ctx.arcTo(x + w, y, x + w, y + h, r);
-    ctx.arcTo(x + w, y + h, x, y + h, r);
-    ctx.arcTo(x, y + h, x, y, r);
-    ctx.arcTo(x, y, x + w, y, r);
-    ctx.closePath();
-  }
-
-  function drawBrush(p) {
-    ctx.save();
-    ctx.translate(p.x, p.y);
-    ctx.rotate(p.rot);
-    // bristle tip (touches ground at y=0)
-    ctx.fillStyle = INK;
-    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-7, -14); ctx.lineTo(7, -14); ctx.closePath(); ctx.fill();
-    // ferrule
-    ctx.fillStyle = INK2; ctx.fillRect(-7, -20, 14, 6);
-    // handle
-    ctx.fillStyle = ACCENT; rr(-5, -p.h, 10, p.h - 20, 4); ctx.fill();
-    ctx.restore();
-  }
-
-  function drawCactus(o) {
-    var x = o.x, base = groundLine;
-    ctx.fillStyle = INK;
-    rr(x + 7, base - o.h, 10, o.h, 2); ctx.fill();
-    if (o.arms >= 1) {
-      rr(x, base - o.h * 0.62, 8, 6, 2); ctx.fill();
-      rr(x, base - o.h * 0.62 - 14, 6, 14, 2); ctx.fill();
-    }
-    if (o.arms >= 2) {
-      rr(x + 16, base - o.h * 0.48, 8, 6, 2); ctx.fill();
-      rr(x + 18, base - o.h * 0.48 - 12, 6, 12, 2); ctx.fill();
-    }
-  }
-
-  function drawDino(x, ground, blink) {
-    ctx.fillStyle = INK2;
-    var gy = ground;
-    ctx.fillRect(x + 4,  gy - 22, 14, 18);
-    ctx.fillRect(x + 14, gy - 28, 16, 12);
-    ctx.fillRect(x,     gy - 16, 8,  6);
-    ctx.fillRect(x + 6,  gy - 4,  4,  4);
-    ctx.fillRect(x + 14, gy - 4,  4,  4);
-    ctx.fillStyle = INK;
-    if (blink) ctx.fillRect(x + 22, gy - 24, 4, 1);
-    else       ctx.fillRect(x + 23, gy - 25, 2, 2);
-  }
-
-  function pad(n) { return ('00000' + Math.floor(n)).slice(-5); }
-  function inView() { var r = canvas.getBoundingClientRect(); return r.top < window.innerHeight && r.bottom > 0; }
-
-  function loop() {
-    requestAnimationFrame(loop);
-    frame++;
-    var dinoBlink = Math.floor(frame / 80) % 6 === 5;
-    ctx.clearRect(0, 0, W, H);
-
-    // ground
-    ctx.strokeStyle = 'rgba(10,13,18,0.28)'; ctx.lineWidth = 2;
-    ctx.beginPath(); ctx.moveTo(0, groundLine + 1); ctx.lineTo(W, groundLine + 1); ctx.stroke();
-    ctx.fillStyle = 'rgba(10,13,18,0.16)';
-    var off = (t * speed) % 42;
-    for (var gx = -off; gx < W; gx += 42) ctx.fillRect(gx, groundLine + 8, 12, 2);
-
-    if (state === 'running') {
-      t++; score += speed * 0.02;
-      speed = Math.min(13, speed + 0.0016);
-      spawnIn--; if (spawnIn <= 0) { spawn(); spawnIn = Math.max(36, 92 - speed * 3 + Math.random() * 42); }
-    }
-
-    // physics
-    player.vy += GRAV; player.y += player.vy;
-    if (player.y >= groundLine) { player.y = groundLine; player.vy = 0; player.onGround = true; }
-    player.rot = player.onGround ? 0 : Math.max(-0.45, Math.min(0.45, player.vy * 0.03));
-
-    // ink trail
-    if (state === 'running' && player.onGround && t % 6 === 0)
-      trail.push({ x: player.x - 7, y: groundLine, a: 0.5, r: 2 + Math.random() * 2 });
-    for (var i = trail.length - 1; i >= 0; i--) {
-      var d = trail[i]; d.x -= speed; d.a -= 0.012;
-      if (d.a <= 0) { trail.splice(i, 1); continue; }
-      ctx.fillStyle = 'rgba(58,58,64,' + d.a + ')';
-      ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, 7); ctx.fill();
-    }
-
-    // obstacles + collision
-    for (var j = obstacles.length - 1; j >= 0; j--) {
-      var o = obstacles[j];
-      if (state === 'running') o.x -= speed;
-      if (o.x + o.w < -4) { obstacles.splice(j, 1); continue; }
-      if (o.type === 'cactus') drawCactus(o);
-      else { ctx.fillStyle = INK; rr(o.x, groundLine - o.h, o.w, o.h, 4); ctx.fill(); }
-      var pl = player.x - player.w / 2, prt = player.x + player.w / 2, oTop = groundLine - o.h;
-      if (prt > o.x + 2 && pl < o.x + o.w - 2 && player.y > oTop + 4 && state === 'running') {
-        state = 'over'; hi = Math.max(hi, Math.floor(score));
-        try { localStorage.setItem('inkjump-hi', hi); } catch (e) {}
-      }
-    }
-
-    drawBrush(player);
-
-    // score
-    ctx.fillStyle = INK2; ctx.font = '600 13px "JetBrains Mono", monospace'; ctx.textAlign = 'right';
-    ctx.fillText('HI ' + pad(hi) + '   ' + pad(score), W - 16, 26); ctx.textAlign = 'left';
-
-    if (state === 'ready') {
-      drawDino(W - 88, groundLine, dinoBlink);
-      ctx.fillStyle = INK2; ctx.textAlign = 'center';
-      ctx.font = '600 14px "JetBrains Mono", monospace';
-      ctx.fillText('press space / tap to play', W / 2, H / 2 - 8); ctx.textAlign = 'left';
-    } else if (state === 'over') {
-      ctx.fillStyle = INK; ctx.textAlign = 'center';
-      ctx.font = '700 20px "DM Sans", sans-serif';
-      ctx.fillText('Game over', W / 2, H / 2 - 10);
-      ctx.fillStyle = INK2; ctx.font = '600 12px "JetBrains Mono", monospace';
-      ctx.fillText('press space / tap to run it back', W / 2, H / 2 + 12); ctx.textAlign = 'left';
-    }
-  }
-  loop();
-
-  window.addEventListener('keydown', function (e) {
-    if (e.code === 'Space' || e.key === ' ' || e.key === 'ArrowUp') {
-      if (inView()) { e.preventDefault(); jump(); }
-    }
-  });
-  canvas.addEventListener('pointerdown', function (e) { e.preventDefault(); jump(); });
-})();
-</script>
-
 <footer>
   <div class="wrap">
     <div class="big">I'm a maker who loves technology. Let's make something.</div>
@@ -1084,7 +814,7 @@ figure img { cursor: zoom-in; }
 
   /* 1 — Scroll reveal ("ink wipe" on headings, fade-rise on the rest) */
   if (!reduce && 'IntersectionObserver' in window) {
-    var fade = document.querySelectorAll('.case-num, .case-sub, .case .shots > *, .case .block, .case .jd-tag, .play-head, .play-frame');
+    var fade = document.querySelectorAll('.case-num, .case-sub, .case .shots > *, .case .block, .case .jd-tag');
     var wipe = document.querySelectorAll('.case-title, .thesis p');
     fade.forEach(function (el) { el.classList.add('reveal'); });
     wipe.forEach(function (el) { el.classList.add('reveal-wipe'); });
